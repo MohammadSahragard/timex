@@ -9,7 +9,7 @@ const PageLink = ({ children, href, isButton }) => {
             href={href}
             className={!isButton ? 'text-foreground hover:text-default font-medium underline underline-offset-2 uppercase transition-all' : null}
         >
-            {children}
+            {!isButton ? children : null}
             {isButton ? <Button>{children}</Button> : null}
         </Link>
     );
