@@ -1,6 +1,6 @@
 //* components
 import Link from 'next/link';
-import Button from './Button';
+import Button from '../buttons/Button';
 
 
 const PageLink = ({ children, href, isButton, buttonProps }) => {

@@ -1,5 +1,5 @@
 //* components
-import Tooltip from '@/components/ui/Tooltip';
+import Tooltip from '@/components/ui/texts/Tooltip';
 import Link from 'next/link';
 
 

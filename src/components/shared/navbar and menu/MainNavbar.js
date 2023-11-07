@@ -1,8 +1,8 @@
 //* components
 import { Button as NextUiButton } from '@nextui-org/button';
-import Logo from "@/components/ui/Logo";
+import Logo from "@/components/ui/links/Logo";
 import NavbarBasket from "../cart/NavbarBasket";
-import MenuToggler from '@/components/ui/MenuToggler';
+import MenuToggler from '@/components/ui/buttons/MenuToggler';
 
 
 const MainNavbar = () => {

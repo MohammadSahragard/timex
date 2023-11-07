@@ -1,7 +1,7 @@
 //* components
-import MenuToggler from "@/components/ui/MenuToggler";
-import NavLink from "@/components/ui/NavLink";
-import SocialMediaLinks from "@/components/ui/SocialMediaLinks";
+import MenuToggler from "@/components/ui/buttons/MenuToggler";
+import NavLink from "@/components/ui/links/NavLink";
+import SocialMediaLinks from "@/components/ui/links/SocialMediaLinks";
 
 
 

@@ -4,13 +4,13 @@ import { Card, CardBody } from '@nextui-org/card';
 //* components
 import Link from 'next/link';
 import Image from 'next/image';
-import Title from '@/components/ui/Title';
-import ProductName from '@/components/ui/ProductName';
-import Button from '@/components/ui/Button';
+import Title from '@/components/ui/texts/Title';
+import ProductName from '@/components/ui/texts/ProductName';
+import Button from '@/components/ui/buttons/Button';
 import { Button as NextUiButton } from '@nextui-org/button';
-import Tooltip from '@/components/ui/Tooltip';
-import Rate from '@/components/ui/Rate';
-import Price from '@/components/ui/Price';
+import Tooltip from '@/components/ui/texts/Tooltip';
+import Rate from '@/components/ui/value/Rate';
+import Price from '@/components/ui/texts/Price';
 
 
 const BasketCard = ({ data }) => {

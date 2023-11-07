@@ -4,8 +4,8 @@ import { Card, CardFooter } from '@nextui-org/card';
 //* components
 import Link from 'next/link';
 import Image from 'next/image';
-import Title from '@/components/ui/Title';
-import PageLink from '@/components/ui/PageLink';
+import Title from '@/components/ui/texts/Title';
+import PageLink from '@/components/ui/links/PageLink';
 
 
 const CollectionCard = ({ imageSrc, titleName, href }) => {
@@ -15,7 +15,7 @@ const CollectionCard = ({ imageSrc, titleName, href }) => {
             shadow='none'
             className='w-max'
         >
-            <Image 
+            <Image
                 src='/women-category.webp'
                 width={300}
                 height={300}

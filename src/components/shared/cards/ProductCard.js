@@ -4,12 +4,12 @@ import { Card, CardBody, CardFooter } from '@nextui-org/card';
 //* components
 import Link from 'next/link';
 import Image from 'next/image';
-import Tooltip from '@/components/ui/Tooltip';
-import Button from '@/components/ui/Button';
-import Rate from '@/components/ui/Rate';
-import ProductName from '@/components/ui/ProductName';
-import Price from '@/components/ui/Price';
-import LastPrice from '@/components/ui/LastPrice';
+import Tooltip from '@/components/ui/texts/Tooltip';
+import Button from '@/components/ui/buttons/Button';
+import Rate from '@/components/ui/value/Rate';
+import ProductName from '@/components/ui/texts/ProductName';
+import Price from '@/components/ui/texts/Price';
+import LastPrice from '@/components/ui/texts/LastPrice';
 
 //* helper
 import { stringSplitter } from '@/helper/function';
