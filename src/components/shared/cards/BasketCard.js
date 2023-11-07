@@ -63,7 +63,6 @@ const BasketCard = ({ data }) => {
 
                 <NextUiButton
                     isIconOnly
-                    // variant='light'
                     className='bg-transparent text-foreground'
                 >
                     <i className='fat fa-xmark-large fa-2xl'></i>

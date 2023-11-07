@@ -14,7 +14,7 @@ const NavLink = ({ children, href }) => {
 
     return (
         <Link
-            className={`${pathname === href ? 'text-primary' : 'text-foreground'} font-bold`}
+            className={`${pathname === href ? 'text-primary hover:text-opacity-80' : 'text-foreground hover:text-default'} font-medium transition-all`}
             href={href}
         >
             {children}

@@ -2,7 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+
+::-webkit-scrollbar {
+    background-color: #ddd;
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #211CFD;
+    border: 3px solid #ddd;
+    border-radius: 50px;
+}
+
+
 /* global class */
 .writing-vertical-lr {
     writing-mode: vertical-lr;
+}
+
+/* styles for when i don't like scrolled screen */
+.app.popup-shown {
+    max-height: 100vh;
+    overflow: hidden;
 }
