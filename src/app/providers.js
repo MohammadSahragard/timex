@@ -14,7 +14,7 @@ import 'aos/dist/aos.css';
 
 const Providers = ({ children }) => {
 
-    useEffect(() => {AOS.init({offset: 20})}, []);
+    useEffect(() => {AOS.init({offset: 20, duration: 1000})}, []);
 
 
     return (

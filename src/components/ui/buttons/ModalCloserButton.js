@@ -1,7 +1,7 @@
 'use client';
 
 //* components
-import { Button, toggle } from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
 
 //* animations
 import { fadeOutTransition } from "@/animations/animate";

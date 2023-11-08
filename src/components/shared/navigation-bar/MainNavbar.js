@@ -9,11 +9,11 @@ import SearchbarToggler from '@/components/ui/buttons/SearchbarToggler';
 const MainNavbar = () => {
     return (
         <header
-            className='main-navbar h-16 fixed inset-[0_0_auto_0] pr-[3%] grid grid-cols-[150px_max-content_auto] items-center'
+            className='main-navbar h-16 fixed inset-[0_0_auto_0] px-[3%] grid grid-cols-[calc(150px_-_3%)_max-content_auto] items-center z-20'
             data-aos='fade-down'
         >
 
-            <div className='mx-auto flex items-center gap-2'>
+            <div className='flex items-center gap-2'>
                 <section className='lg:hidden'>
                     <MenuToggler />
                 </section>
@@ -24,10 +24,12 @@ const MainNavbar = () => {
                 <span className='hidden sm:block'>Free Shopping On Order <span className='text-primary'>$75+</span></span>
             </strong>
 
-            <div className='flex justify-end items-center gap-[15%]'>
+            <div className='flex justify-end items-center gap-2 sm:gap-[15%]'>
                 <NavbarBasket />
 
                 <div className='flex items-center gap-2'>
+                    <SearchbarToggler />
+
                     <NextUiButton
                         isIconOnly
                         className='bg-transparent text-foreground text-2xl md:hidden'
@@ -37,8 +39,6 @@ const MainNavbar = () => {
                     <NextUiButton className='bg-transparent text-foreground uppercase font-medium hidden md:block'>
                         my account
                     </NextUiButton>
-
-                    <SearchbarToggler />
                 </div>
             </div>
 

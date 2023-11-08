@@ -5,7 +5,7 @@ const Heading = ({ children, rowDirection }) => {
     const boldHeading = splitHeading?.slice(1);
 
     return (
-        <h2 className={`text-4xl text-foreground flex
+        <h2 className={`text-4xl sm:text-5xl text-foreground flex
                         ${rowDirection ? 'gap-2' : 'flex-col'}`
         }>
             <span className='font-light'>{lightHeading}</span>

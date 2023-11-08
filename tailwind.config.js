@@ -8,7 +8,11 @@ module.exports = {
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        spin: 'spin 350ms linear 1'
+      }
+    },
   },
   plugins: [nextui({
     defaultExtendTheme: 'light',
@@ -19,11 +23,11 @@ module.exports = {
           background: '#ffffff',
           default: {
             DEFAULT: '#4b5563',
-            foreground: '#4b5563'
+            foreground: '#ffffff'
           },
           primary: {
             DEFAULT: '#211CFD',
-            foreground: '#fff',
+            foreground: '#ffffff',
           },
         },
       },
