@@ -3,6 +3,7 @@ import { Button as NextUiButton } from '@nextui-org/button';
 import Logo from "@/components/ui/links/Logo";
 import NavbarBasket from "../cart/NavbarBasket";
 import MenuToggler from '@/components/ui/buttons/MenuToggler';
+import SearchbarToggler from '@/components/ui/buttons/SearchbarToggler';
 
 
 const MainNavbar = () => {
@@ -37,12 +38,7 @@ const MainNavbar = () => {
                         my account
                     </NextUiButton>
 
-                    <NextUiButton
-                        isIconOnly
-                        className='bg-transparent text-foreground text-xl'
-                    >
-                        <i className='far fa-search'></i>
-                    </NextUiButton>
+                    <SearchbarToggler />
                 </div>
             </div>
 

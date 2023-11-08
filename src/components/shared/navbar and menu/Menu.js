@@ -5,7 +5,7 @@ import SocialMediaLinks from "@/components/ui/links/SocialMediaLinks";
 
 
 
-const Menu = () => {
+const Menu = ({ onModal }) => {
 
     const Links = [
         { label: 'Home', href: '/' },
@@ -28,9 +28,11 @@ const Menu = () => {
                         </section>
                     )
                 }
-                <section data-aos='fade-right' data-aos-delay={1000}>
-                    <MenuToggler />
-                </section>
+                {
+                    !onModal && <section data-aos='fade-right' data-aos-delay={1000}>
+                        <MenuToggler />
+                    </section>
+                }
             </nav>
 
             <div data-aos='fade-right' data-aos-delay={1000}>

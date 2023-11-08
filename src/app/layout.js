@@ -8,6 +8,7 @@ import Providers from './providers';
 import MainNavbar from '@/components/shared/navbar and menu/MainNavbar';
 import Menu from '@/components/shared/navbar and menu/Menu';
 import FullMenu from '@/components/shared/modals/FullMenu';
+import SearchBar from '@/components/shared/modals/SearchBar';
 
 // font
 const roboto = Roboto({ subsets: ['latin'], weight: ['100', '300', '400', '500', '700', '900'] });
@@ -27,7 +28,9 @@ export default function RootLayout({ children }) {
 
           <MainNavbar />
           <Menu />
+          {/* modals */}
           <FullMenu />
+         <SearchBar /> 
 
           <main className='app min-h-screen'>
             {children}

@@ -20,7 +20,7 @@ const ProductCard = ({ data }) => {
         <Card
             radius='none'
             shadow='none'
-            className='w-max'
+            className='w-max h-max'
         >
             <div className='relative mb-4'>
                 <div className='absolute top-2/4 -translate-y-2/4 rounded-full bg-default/60 w-full aspect-square'></div>
