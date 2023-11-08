@@ -1,7 +1,7 @@
 //* components
 import Logo from "@/components/ui/links/Logo";
 import ModalCloserButton from "@/components/ui/buttons/ModalCloserButton";
-import Menu from "../navbar and menu/Menu";
+import Menu from "../navigation-bar/Menu";
 import SearchbarInput from "@/components/ui/inputs/SearchbarInput";
 import ProductCard from "../cards/ProductCard";
 

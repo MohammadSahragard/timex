@@ -5,8 +5,8 @@ import '@/FontAwesome.Pro.6.4.2/css/all.css';
 import Providers from './providers';
 
 // components
-import MainNavbar from '@/components/shared/navbar and menu/MainNavbar';
-import Menu from '@/components/shared/navbar and menu/Menu';
+import MainNavbar from '@/components/shared/navigation-bar/MainNavbar';
+import Menu from '@/components/shared/navigation-bar/Menu';
 import FullMenu from '@/components/shared/modals/FullMenu';
 import SearchBar from '@/components/shared/modals/SearchBar';
 
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
           <Menu />
           {/* modals */}
           <FullMenu />
-         <SearchBar /> 
+          <SearchBar />
 
           <main className='app min-h-screen'>
             {children}
