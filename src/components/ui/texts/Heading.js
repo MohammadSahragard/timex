@@ -1,11 +1,11 @@
-const Heading = ({ children, rowDirection }) => {
+const Heading = ({ children, customSize, rowDirection }) => {
 
     const splitHeading = children?.split(' ');
     const lightHeading = splitHeading?.[0];
     const boldHeading = splitHeading?.slice(1);
 
     return (
-        <h2 className={`text-4xl sm:text-5xl text-foreground flex
+        <h2 className={`${customSize ? customSize : 'text-4xl sm:text-5xl'} text-foreground flex
                         ${rowDirection ? 'gap-2' : 'flex-col'}`
         }>
             <span className='font-light'>{lightHeading}</span>

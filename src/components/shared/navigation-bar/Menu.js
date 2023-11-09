@@ -17,7 +17,7 @@ const Menu = ({ onModal }) => {
 
 
     return (
-        <div className='w-[150px] fixed top-16 left-[3%] bottom-0 hidden lg:grid grid-rows-[auto_max-content] py-[20px] z-20'>
+        <div className='fixed top-16 left-[3%] bottom-0 hidden lg:grid grid-rows-[auto_max-content] py-[20px] z-20'>
             <nav className='w-min flex flex-col gap-3'>
                 {
                     Links.map((link, index) =>
