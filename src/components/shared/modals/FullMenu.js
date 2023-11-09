@@ -5,6 +5,8 @@ import SocialMediaLinks from "@/components/ui/links/SocialMediaLinks";
 import SmallTitle from "@/components/ui/texts/SmallTitle";
 import QuickLink from "@/components/ui/links/QuickLink";
 import ModalCloserButton from "@/components/ui/buttons/ModalCloserButton";
+import Weekender from "@/components/home/weekender-archive/Weekender";
+import Archive from "@/components/home/weekender-archive/Archive";
 
 
 
@@ -103,7 +105,7 @@ const FullMenu = () => {
                     </div>
 
 
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col gap-10'>
                         <div className='flex flex-col sm:flex-row justify-between flex-wrap gap-10'>
                             {
                                 links.quickLinks.map((section, index) =>
@@ -117,6 +119,10 @@ const FullMenu = () => {
                                     </div>
                                 )
                             }
+                        </div>
+                        <div className='h-[50vh] grid-rows-2 hidden lg:grid'>
+                            <Weekender />
+                            <Archive />
                         </div>
                     </div>
                 </div>
