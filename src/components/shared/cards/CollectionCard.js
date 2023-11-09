@@ -13,19 +13,19 @@ const CollectionCard = ({ imageSrc, titleName, href }) => {
         <Card
             radius='none'
             shadow='none'
-            className='w-max'
+            className='w-full'
         >
             <Image
-                src='/women-category.webp'
+                src={imageSrc}
                 width={300}
                 height={300}
-                className='object-cover aspect-square'
+                className='w-full h-[300px] object-cover'
                 alt='Collection image'
             />
 
             <CardFooter className='flex flex-col items-start gap-2 mt-2 p-0'>
-                <Title>Collection Name</Title>
-                <PageLink href='/' isButton>Browse</PageLink>
+                <Title>{titleName}</Title>
+                <PageLink href={href} isButton>Browse</PageLink>
             </CardFooter>
         </Card>
     );

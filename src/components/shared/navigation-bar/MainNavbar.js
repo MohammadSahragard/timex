@@ -5,6 +5,10 @@ import NavbarBasket from "../cart/NavbarBasket";
 import MenuToggler from '@/components/ui/buttons/MenuToggler';
 import SearchbarToggler from '@/components/ui/buttons/SearchbarToggler';
 
+//* helper
+import { navbarBg } from '@/helper/scroll';
+
+
 
 const MainNavbar = () => {
     return (
