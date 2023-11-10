@@ -18,7 +18,7 @@ const CollectionsButtons = () => {
             {
                 collections.map((collection, index) =>
                     <Button
-                        key={`m-${collection.length * (index+1)}`}
+                        key={`m-${collection.length * (index+1) + 'h4l3'}`}
                         variant='bordered'
                         color={collection === 'UFC' ? 'primary' : 'default'}
                     >

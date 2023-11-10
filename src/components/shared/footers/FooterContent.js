@@ -55,7 +55,9 @@ const FooterContent = () => {
                         <SmallTitle>{section.title}</SmallTitle>
                         <nav className='flex flex-col gap-2 items-start'>
                             {
-                                section.links.map((link, index) => <QuickLink key={index + 630} href={link.href ?? '/'}>{link.label}</QuickLink>)
+                                section.links.map((link, index) =>
+                                    <QuickLink key={index + '6fs30'} href={link.href ?? '/'}>{link.label}</QuickLink>
+                                )
                             }
                         </nav>
                     </section>
@@ -63,7 +65,7 @@ const FooterContent = () => {
             }
             <section className='flex flex-col gap-5 items-start'>
                 <SmallTitle>ABOUT US</SmallTitle>
-                <p className='font-normal text-default' style={{maxWidth: '50ch'}}>
+                <p className='font-normal text-default' style={{ maxWidth: '50ch' }}>
                     Timex Group USA,Inc (formerly known as Timex Corporation) is an American manufacturer company founded n 1854 The. company i now a wholly owned subsidiary of the Dutch conglomerate Timex Group B.V.
                 </p>
                 <PageLink href='/about-us'>Read More</PageLink>

@@ -16,8 +16,9 @@ const SocialMediaLinks = () => {
     return (
         <nav className='w-min flex flex-col gap-2'>
             {
-                links.map(link =>
+                links.map((link, index) =>
                     <Button
+                        key={(2 * index) + 'h5kl'}
                         isIconOnly
                         className='bg-white text-primary hover:bg-primary hover:text-white text-xl'
                         radius='full'
