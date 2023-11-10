@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 
-const Logo = () => {
+const Logo = ({ isDarkTheme }) => {
     return (
         <Link href='/'>
             <Image
-                src='/Timex_logo.svg'
+                src={isDarkTheme ? '/Timex_logo_dark.svg' : '/Timex_logo.svg'}
                 alt='logo image'
                 height={20}
                 width={70}

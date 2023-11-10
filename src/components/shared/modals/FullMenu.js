@@ -65,7 +65,7 @@ const FullMenu = () => {
 
 
     return (
-        <div className='full-menu fixed top-0 left-0 w-full h-full translate-x-full bg-white transition-transform overflow-hidden z-30' style={{ transitionDuration: '700ms' }}>
+        <div className='full-menu fixed top-0 left-0 w-full h-full translate-x-full bg-white transition-transform overflow-hidden z-40' style={{ transitionDuration: '700ms' }}>
 
 
             <header className='h-16 bg-white/80 backdrop-blur-sm absolute inset-0 px-[3%] grid grid-cols-[150px_auto] justify-between items-center z-10'>
@@ -109,14 +109,14 @@ const FullMenu = () => {
                         <div className='flex flex-col sm:flex-row justify-between flex-wrap gap-10'>
                             {
                                 links.quickLinks.map((section, index) =>
-                                    <div key={index + 50} className='flex flex-col gap-5 items-start'>
+                                    <section key={index + 50} className='flex flex-col gap-5 items-start'>
                                         <SmallTitle>{section.title}</SmallTitle>
                                         <nav className='text-gray-600 flex flex-col gap-2 items-start'>
                                             {
                                                 section.links.map((link, index) => <QuickLink key={index + 100} href='/'>{link}</QuickLink>)
                                             }
                                         </nav>
-                                    </div>
+                                    </section>
                                 )
                             }
                         </div>

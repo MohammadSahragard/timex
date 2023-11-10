@@ -31,6 +31,20 @@ module.exports = {
           },
         },
       },
+      dark: {
+        colors: {
+          foreground: '#ffffff',
+          background: '#111827',
+          default: {
+            DEFAULT: '#a1a1aa',
+            foreground: '#a1a1aa'
+          },
+          primary: {
+            DEFAULT: '#211CFD',
+            foreground: '#ffffff',
+          },
+        }
+      }
     },
   })],
 }

@@ -9,7 +9,7 @@ import ProductCard from "../cards/ProductCard";
 
 const SearchBar = () => {
     return (
-        <div className='searchbar fixed top-0 left-0 w-full h-full translate-x-full bg-white transition-transform overflow-hidden z-30' style={{ transitionDuration: '700ms' }}>
+        <div className='searchbar fixed top-0 left-0 w-full h-full translate-x-full bg-white transition-transform overflow-hidden z-40' style={{ transitionDuration: '700ms' }}>
 
 
             <header className='h-16 bg-white/80 backdrop-blur-sm absolute inset-[0_40px_auto_0] grid grid-cols-[150px_auto] justify-between items-center z-10'>

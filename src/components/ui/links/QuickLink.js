@@ -6,7 +6,7 @@ const QuickLink = ({ children, href }) => {
     return (
         <Link
             href={href}
-            className='font-medium text-default hover:text-foreground transition-all'
+            className='text-default hover:text-foreground transition-all'
         >
             {children}
         </Link>
