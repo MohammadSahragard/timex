@@ -1,19 +1,30 @@
+'use client';
+
+// public
+import { useSelector } from "react-redux";
+
 //* components
-import Image from "next/image";
-import Link from "next/link";
+import { Image } from "@nextui-org/react";
 
 
 
-const HighlightImage = () => {
+const HighlightImage = ({ data }) => {
+
+    const highlightWatch = useSelector(state => state.options.highlightWatch);
+    const category = highlightWatch.category === 'men' ? 'menWatches' : 'womenWatches';
+
+    const currentWatch = data?.[category]?.[highlightWatch.currentWatch];
+
+
     return (
         <div className='relative w-[450px] h-[450px] sm:w-[600px] sm:h-[600px] flex items-center sm:grid sm:place-items-center'>
             <div className='absolute inset-0 rounded-full bg-white' data-aos='zoom-in'></div>
-            <div className='relative h-4/6 w-72 sm:w-[350px] overflow-visible' data-aos='fade-left'>
+            <div data-aos='fade-left'>
                 <Image
-                    className='object-contain'
-                    src='/day-date.webp'
+                    className='highlight-image w-72 sm:w-[350px] !transition-none'
+                    src={currentWatch.image}
                     alt='Product image'
-                    fill
+                    disableSkeleton
                 />
             </div>
         </div>

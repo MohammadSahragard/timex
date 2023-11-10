@@ -1,14 +1,29 @@
+'use client';
+
+// public
+import { useSelector } from 'react-redux';
+
 //* components
-import SlideCounter from "@/components/ui/value/SliderCounter";
-import Title from "@/components/ui/texts/Title";
-import Heading from "@/components/ui/texts/Heading";
-import Price from "@/components/ui/texts/Price";
-import LastPrice from "@/components/ui/texts/LastPrice";
-import Button from "@/components/ui/buttons/Button";
-import PageLink from "@/components/ui/links/PageLink";
+import SlideCounter from '@/components/ui/value/SliderCounter';
+import Title from '@/components/ui/texts/Title';
+import Heading from '@/components/ui/texts/Heading';
+import Price from '@/components/ui/texts/Price';
+import LastPrice from '@/components/ui/texts/LastPrice';
+import Button from '@/components/ui/buttons/Button';
+import PageLink from '@/components/ui/links/PageLink';
+
+//* helper
+import { stringSplitter } from '@/helper/function';
 
 
-const HighlightWatchInfo = () => {
+const HighlightWatchInfo = ({ data }) => {
+
+    const highlightWatch = useSelector(state => state.options.highlightWatch);
+    const category = highlightWatch.category === 'men' ? 'menWatches' : 'womenWatches';
+
+    const currentWatch = data?.[category]?.[highlightWatch.currentWatch];
+
+
     return (
         <div className='w-full h-max flex justify-center items-center sm:gap-[40%] sm:justify-center px-[3%]'>
             {/* left sidebar info  */}
@@ -21,10 +36,10 @@ const HighlightWatchInfo = () => {
                 >
                     <strong className='text-primary text-6xl font-black absolute top-0'>- 10%</strong>
                     <Title>
-                        <span className='highlights-category font-bold'>men's</span>
+                        <span className='highlights-category font-bold'>{highlightWatch.category}'s </span>
                         <span className='font-light'>watches</span>
                     </Title>
-                    <SlideCounter current={1} max={4} />
+                    <SlideCounter current={highlightWatch?.currentWatch + 1 ?? 1} max={4} />
                 </div>
             </div>
 
@@ -34,11 +49,13 @@ const HighlightWatchInfo = () => {
                 <div className='flex flex-col gap-10 w-max h-max'
                     data-aos='fade-left' data-aos-delay='900'
                 >
-                    <Heading>The Expedition North</Heading>
-
-                    <div className='highlight-name flex gap-4'>
-                        <Price value={89} />
-                        <LastPrice value={120} />
+                    <div className='highlight-name flex flex-col gap-10'>
+                        <Heading>{stringSplitter('The ' + currentWatch?.name, 0, 3)}</Heading>
+    
+                        <div className='flex gap-4'>
+                            <Price value={currentWatch?.price ?? 0} />
+                            <LastPrice value={currentWatch?.price + 50 ?? 0} />
+                        </div>
                     </div>
 
                     <div className='flex flex-col gap-4 items-start sm:flex-row sm:items-center'>
