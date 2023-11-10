@@ -1,5 +1,5 @@
 //* components
-import Image from "next/image";
+import Image from 'next/image';
 
 
 const CollectionImage = () => {
@@ -9,6 +9,7 @@ const CollectionImage = () => {
                 src='/sale-category.webp'
                 className='object-cover'
                 fill
+                quality={100}
                 alt='Collection image'
             />
         </div>

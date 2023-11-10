@@ -2,7 +2,6 @@
 import { Card, CardFooter } from '@nextui-org/card';
 
 //* components
-import Link from 'next/link';
 import Image from 'next/image';
 import Title from '@/components/ui/texts/Title';
 import PageLink from '@/components/ui/links/PageLink';
@@ -19,6 +18,7 @@ const CollectionCard = ({ imageSrc, titleName, href }) => {
                 src={imageSrc}
                 width={300}
                 height={300}
+                quality={100}
                 className='w-full h-[300px] object-cover'
                 alt='Collection image'
             />

@@ -1,7 +1,7 @@
 //* components
 import { Button as NextUiButton } from '@nextui-org/button';
 import Logo from "@/components/ui/links/Logo";
-import NavbarBasket from "../cart/NavbarBasket";
+import NavbarBasket from "../../ui/buttons/NavbarBasket";
 import MenuToggler from '@/components/ui/buttons/MenuToggler';
 import SearchbarToggler from '@/components/ui/buttons/SearchbarToggler';
 

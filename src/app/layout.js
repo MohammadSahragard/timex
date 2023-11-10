@@ -10,6 +10,7 @@ import Menu from '@/components/shared/navigation-bar/Menu';
 import FullMenu from '@/components/shared/modals/FullMenu';
 import SearchBar from '@/components/shared/modals/SearchBar';
 import Footer from '@/components/shared/footers/Footer';
+import Basket from '@/components/shared/modals/Basket';
 
 // font
 const roboto = Roboto({ subsets: ['latin'], weight: ['100', '300', '400', '500', '700', '900'] });
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
           {/* modals */}
           <FullMenu />
           <SearchBar />
+          <Basket />
 
           <main className='min-h-screen'>
             {children}

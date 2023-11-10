@@ -11,13 +11,13 @@ import SectionTitle from '@/components/ui/texts/SectionTitle';
 const Weekender = ({ CTA }) => {
     return (
         <div className='relative bg-[#F7F4EF] flex items-center justify-center sm:justify-end'>
-            <div className='hidden sm:block absolute top-0 bottom-0 left-0 w-96'>
-                <Image
-                    src='/weekender.png'
-                    fill
-                    alt='Weekender banner image'
-                />
-            </div>
+            <Image
+                src='/weekender.png'
+                width={300}
+                height={300}
+                alt='Weekender banner image'
+                className='hidden sm:block absolute left-[3%] h-full w-auto'
+            />
 
             <div className='relative w-2/4 flex flex-col gap-2 items-center text-center sm:items-start backdrop-blur-md'>
                 <Title>Weekender</Title>

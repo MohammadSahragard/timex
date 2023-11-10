@@ -7,6 +7,7 @@ import QuickLink from "@/components/ui/links/QuickLink";
 import ModalCloserButton from "@/components/ui/buttons/ModalCloserButton";
 import Weekender from "@/components/home/weekender-archive/Weekender";
 import Archive from "@/components/home/weekender-archive/Archive";
+import SectionTitle from "@/components/ui/texts/SectionTitle";
 
 
 
@@ -88,8 +89,8 @@ const FullMenu = () => {
                 <SocialMediaLinks />
             </section>
 
-            <div className='full-menu_content h-full pl-[150px] pr-[40px] overflow-y-auto overflow-x-hidden'>
-                <div className='grid grid-rows-[repeat(2,max-content)] gap-16 pt-16 pb-6 sm:grid-cols-[1fr_2fr]'>
+            <div className='full-menu_content h-full pt-16 pl-[150px] pr-[40px] pb-6 lg:pb-0 lg:pr-[150px] overflow-auto xl:overflow-hidden'>
+                <div className='grid grid-rows-[repeat(2,max-content)] gap-16 sm:grid-cols-[1fr_2fr]'>
                     <div className='main-section-menu relative'>
                         <nav className='w-max h-max flex flex-col items-start gap-2 text-xl'>
                             {
@@ -120,13 +121,15 @@ const FullMenu = () => {
                                 )
                             }
                         </div>
-                        <div className='h-[50vh] grid-rows-2 hidden lg:grid'>
+                        <div className='h-[300px] grid-rows-2 hidden lg:grid'>
                             <Weekender />
                             <Archive />
                         </div>
                     </div>
                 </div>
             </div>
+
+            <SectionTitle position='right-[3%] bottom-16'>Main menu</SectionTitle>
 
 
         </div>

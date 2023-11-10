@@ -4,6 +4,7 @@ import ModalCloserButton from "@/components/ui/buttons/ModalCloserButton";
 import Menu from "../navigation-bar/Menu";
 import SearchbarInput from "@/components/ui/inputs/SearchbarInput";
 import ProductCard from "../cards/ProductCard";
+import SectionTitle from "@/components/ui/texts/SectionTitle";
 
 
 
@@ -28,31 +29,28 @@ const SearchBar = () => {
                 />
             </header>
 
-            <div className='searchbar_sidebar none'>
+            <div className='searchbar_sidebar'>
                 <Menu onModal />
             </div>
 
-            <div className='searchbar_content h-full w-full px-[40px] lg:pl-[150px] lg:pr-[40px] absolute top-16 left-0 grid grid-rows-[max-content_auto]'>
+            <div className='searchbar_content px-[40px] lg:px-[150px] absolute inset-0 pt-16 grid grid-rows-[max-content_auto]'>
                 <SearchbarInput />
-                <div className='grid grid-cols-[repeat(auto-fit,_minmax(256px,_1fr))] gap-2 overflow-auto py-5'>
-                    <div className='flex justify-center'>
+                <div className='flex flex-col items-center gap-5 overflow-auto py-5 sm:items-start sm:flex-row sm:flex-wrap'>
+                    <div className='flex justify-start'>
                         <ProductCard />
                     </div>
-                    {/* <div className='flex justify-center'>
+                    <div className='flex justify-start'>
                         <ProductCard />
                     </div>
-                    <div className='flex justify-center'>
+                    <div className='flex justify-start'>
                         <ProductCard />
                     </div>
-                    <div className='flex justify-center'>
+                    <div className='flex justify-start'>
                         <ProductCard />
                     </div>
-                    <div className='flex justify-center'>
+                    <div className='flex justify-start'>
                         <ProductCard />
                     </div>
-                    <div className='flex justify-center'>
-                        <ProductCard />
-                    </div> */}
                     {/* {
                         searched ?
                             searchedWatches.map(product =>
@@ -66,6 +64,8 @@ const SearchBar = () => {
                     } */}
                 </div>
             </div>
+
+            <SectionTitle position='right-[3%] bottom-16'>Find your new watch</SectionTitle>
         </div>
     );
 };
