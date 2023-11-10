@@ -26,7 +26,7 @@ const Categories = () => {
                 <div className='grid grid-cols-[repeat(auto-fit,_minmax(250px,1fr))] gap-5'>
                     {
                         categories.map((category, index) =>
-                            <div key={index * 34} data-aos='fade-left' data-aos-delay={index * 200}>
+                            <div key={(index+1) * 34} data-aos='fade-left' data-aos-delay={index * 200}>
                                 <CollectionCard
                                     imageSrc={category.src}
                                     titleName={category.title}

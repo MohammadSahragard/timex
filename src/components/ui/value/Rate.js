@@ -6,7 +6,7 @@ const Rate = ({ value }) => {
     return (
         <section className='flex gap-1'>
             {
-                stars.map(star => <i className={`${star <= value ? 'fa' : 'far'} fa-star text-primary`}></i>)
+                stars.map(star => <i key={star + 'h4l'} className={`${star <= value ? 'fa' : 'far'} fa-star text-primary`}></i>)
             }
         </section>
     );

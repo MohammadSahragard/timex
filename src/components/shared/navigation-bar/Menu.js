@@ -21,7 +21,7 @@ const Menu = ({ onModal }) => {
             <nav className='w-min flex flex-col gap-3'>
                 {
                     Links.map((link, index) =>
-                        <section key={index} data-aos='fade-right' data-aos-delay={index * 200}>
+                        <section key={index * 2 + 'ht0i'} data-aos='fade-right' data-aos-delay={index * 200}>
                             <NavLink href={link.href}>
                                 {link.label}
                             </NavLink>

@@ -27,7 +27,7 @@ const Weekender = ({ CTA }) => {
                 }
             </div>
 
-            <SectionTitle position='-right-[8.5%] top-2/4'>Weekender</SectionTitle>
+            {CTA && <SectionTitle position='-right-[8.5%] top-2/4'>Weekender</SectionTitle>}
         </div>
     );
 };

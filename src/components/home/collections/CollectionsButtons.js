@@ -16,9 +16,9 @@ const CollectionsButtons = () => {
     return (
         <ButtonGroup fullWidth radius='none'>
             {
-                collections.map(collection =>
+                collections.map((collection, index) =>
                     <Button
-                        key={collection.length}
+                        key={`m-${collection.length * (index+1)}`}
                         variant='bordered'
                         color={collection === 'UFC' ? 'primary' : 'default'}
                     >

@@ -88,13 +88,13 @@ const FullMenu = () => {
                 <SocialMediaLinks />
             </section>
 
-            <div className='full-menu_content h-full pl-[150px] pr-[40px] overflow-auto'>
+            <div className='full-menu_content h-full pl-[150px] pr-[40px] overflow-y-auto overflow-x-hidden'>
                 <div className='grid grid-rows-[repeat(2,max-content)] gap-16 pt-16 pb-6 sm:grid-cols-[1fr_2fr]'>
                     <div className='main-section-menu relative'>
                         <nav className='w-max h-max flex flex-col items-start gap-2 text-xl'>
                             {
                                 links.mainLinks.map((link, index) =>
-                                    <NavLink key={index} href={link.href}>
+                                    <NavLink key={'m2' + index} href={link.href}>
                                         {link.label}
                                     </NavLink>
                                 )
@@ -109,7 +109,7 @@ const FullMenu = () => {
                         <div className='flex flex-col sm:flex-row justify-between flex-wrap gap-10'>
                             {
                                 links.quickLinks.map((section, index) =>
-                                    <section key={index + 50} className='flex flex-col gap-5 items-start'>
+                                    <section key={'j5' + index + 50} className='flex flex-col gap-5 items-start'>
                                         <SmallTitle>{section.title}</SmallTitle>
                                         <nav className='text-gray-600 flex flex-col gap-2 items-start'>
                                             {

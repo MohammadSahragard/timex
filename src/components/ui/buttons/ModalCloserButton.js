@@ -1,10 +1,11 @@
 'use client';
 
 //* components
-import { Button } from "@nextui-org/react";
+import { Button } from '@nextui-org/react';
 
 //* animations
-import { fadeOutTransition } from "@/animations/animate";
+import { fadeOutTransition } from '@/animations/animate';
+import Tooltip from '../texts/Tooltip';
 
 
 const ModalCloserButton = ({ closerClass, modalClass, otherClass }) => {
@@ -24,22 +25,26 @@ const ModalCloserButton = ({ closerClass, modalClass, otherClass }) => {
     };
 
     // close modal with keys
-    window.addEventListener('keydown', e => {
-        const app = document.querySelector('.app');
+    if (typeof window !== 'undefined') {
+        window.addEventListener('keydown', e => {
+            const app = document.querySelector('.app');
 
-        e.key === 'Escape' && toggleModal();
-    });
+            e.key === 'Escape' && toggleModal();
+        });
+    };
 
 
 
     return (
-        <Button
-            isIconOnly
-            className={`${closerClass} bg-transparent text-primary text-2xl`}
-            onClick={toggleModal}
-        >
-            <i className='fal fa-xmark-large'></i>
-        </Button>
+        <Tooltip content='Esc'>
+            <Button
+                isIconOnly
+                className={`${closerClass} bg-transparent text-primary text-2xl`}
+                onClick={toggleModal}
+            >
+                <i className='fal fa-xmark-large'></i>
+            </Button>
+        </Tooltip>
     );
 };
 
