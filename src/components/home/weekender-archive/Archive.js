@@ -5,6 +5,7 @@ import Image from "next/image";
 import Button from "@/components/ui/buttons/Button";
 import Title from "@/components/ui/texts/Title";
 import Subtitle from "@/components/ui/texts/Subtitle";
+import SectionTitle from "@/components/ui/texts/SectionTitle";
 
 
 
@@ -35,6 +36,8 @@ const Archive = ({ CTA }) => {
                     CTA ? <Button>More</Button> : null
                 }
             </div>
+
+            <SectionTitle position='-right-[8.5%] top-2/4'>Archive</SectionTitle>
 
         </div>
     );

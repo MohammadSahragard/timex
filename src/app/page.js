@@ -6,7 +6,7 @@ import WeekenderArchive from "@/components/home/weekender-archive/WeekenderArchi
 
 export default function Home() {
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen overflow-hidden'>
       <HighlightWatches />
       <Categories />
       <Collection />

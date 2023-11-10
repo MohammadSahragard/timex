@@ -4,6 +4,7 @@ import FooterContent from "./FooterContent";
 import FooterSidebar from "./FooterSidebar";
 import Subscribe from "./Subscribe";
 import QuickLink from "@/components/ui/links/QuickLink";
+import SectionTitle from "@/components/ui/texts/SectionTitle";
 
 
 
@@ -12,7 +13,7 @@ const Footer = () => {
         <footer className='dark bg-zinc-900 relative z-30'>
             <Subscribe />
 
-            <div className='relative py-16 pl-[150px] pr-[3%]'>
+            <div className='relative py-16 pl-[150px] pr-[3%] sm:pr-[150px]'>
 
 
                 <FooterSidebar />
@@ -37,6 +38,8 @@ const Footer = () => {
                 <i className='fab fa-github'></i>
                 <QuickLink href='github.com/MohammadSahragard'>Mohammad Sahragard</QuickLink>
             </div>
+
+            <SectionTitle position='bottom-[104px] right-[3%]'>Timex is thanking for your time</SectionTitle>
         </footer>
     );
 };

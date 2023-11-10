@@ -7,7 +7,7 @@ import Subtitle from '@/components/ui/texts/Subtitle';
 
 const Subscribe = () => {
     return (
-        <div className='py-10 relative bg-zinc-800 overflow-hidden pr-[3%] pl-[3%] lg:pl-[150px]'>
+        <div className='py-10 relative bg-zinc-800 overflow-hidden px-[3%] lg:px-[150px]'>
             <div className='absolute left-[3%] top-0 h-full w-2/4'>
                 <Image
                     fill
