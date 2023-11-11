@@ -1,16 +1,25 @@
+'use client';
+
+// public
+import { useSelector } from "react-redux";
+
 //* components
 import SectionsHeader from "@/components/shared/headers/SectionsHeader"
 
 
 
 const SliderHeader = () => {
+
+    const selectedCollection = useSelector(state => state.options.selectedCollection);
+
+
     return (
-        <SectionsHeader 
-            heading='The UFC Collection'
-            headingProps={{customSize: 'text-2xl', rowDirection: true}}
+        <SectionsHeader
+            heading={`The ${selectedCollection} Collection`}
+            headingProps={{ customSize: 'text-2xl', rowDirection: true }}
             link={{
                 name: 'browse',
-                href: '/collection/ufc'
+                href: `/collection/${selectedCollection.split(' ').join('-')}`
             }}
         >A sophisticated watch design with understated elegance.</SectionsHeader>
     );

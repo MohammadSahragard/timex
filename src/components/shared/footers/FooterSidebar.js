@@ -13,10 +13,10 @@ const FooterSidebar = () => {
             <Button
                 radius='full'
                 isIconOnly
-                className='group bg-transparent overflow-visible'
+                className='bg-transparent overflow-visible'
                 onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
             >
-                <i className='group-hover:animate-bounce fat fa-chevron-up fa-3x'></i>
+                <i className='animate-bounce fat fa-chevron-up fa-3x'></i>
             </Button>
         </div>
     );

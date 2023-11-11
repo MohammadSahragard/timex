@@ -9,7 +9,7 @@ import SectionTitle from '@/components/ui/texts/SectionTitle';
 const CollectionsHeader = () => {
     return (
         <div data-aos='fade-left'>
-            <div className='!relative h-max space-y-4'>
+            <div className='!relative h-max space-y-10'>
                 <SectionsHeader
                     heading='New Collections'
                     link={{
@@ -22,7 +22,7 @@ const CollectionsHeader = () => {
     
                 <CollectionImage />
     
-                <SectionTitle position='-right-[8.5%] top-2/4'>The Selected collection</SectionTitle>
+                <SectionTitle position='-right-[8.5%] top-1/4'>The Selected collection</SectionTitle>
             </div>
         </div>
     );

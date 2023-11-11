@@ -1,5 +1,8 @@
 'use client';
 
+// public
+import { useSelector } from 'react-redux';
+
 //* components
 import ProductCard from '../cards/ProductCard';
 
@@ -12,7 +15,12 @@ import 'swiper/css/navigation';
 
 
 
-const Slider = () => {
+const Slider = ({ data, isCollection }) => {
+
+    const selectedCollection = useSelector(state => state.options.selectedCollection);
+    const collection = isCollection ? data?.filter(watch => watch.collection === selectedCollection) : data;
+
+
     return (
         <Swiper
             navigation={true}
@@ -31,36 +39,16 @@ const Slider = () => {
                 },
             }}
         >
-            <SwiperSlide className='!flex justify-center'>
-                <div data-aos='fade-left' data-aos-delay={0}>
-                    <ProductCard />
-                </div>
-            </SwiperSlide>
-            <SwiperSlide className='!flex justify-center'>
-                <div data-aos='fade-left' data-aos-delay={200}>
-                    <ProductCard />
-                </div>
-            </SwiperSlide>
-            <SwiperSlide className='!flex justify-center'>
-                <div data-aos='fade-left' data-aos-delay={400}>
-                    <ProductCard />
-                </div>
-            </SwiperSlide>
-            <SwiperSlide className='!flex justify-center'>
-                <div data-aos='fade-left' data-aos-delay={600}>
-                    <ProductCard />
-                </div>
-            </SwiperSlide>
-            <SwiperSlide className='!flex justify-center'>
-                <div data-aos='fade-left' data-aos-delay={800}>
-                    <ProductCard />
-                </div>
-            </SwiperSlide>
-            <SwiperSlide className='!flex justify-center'>
-                <div data-aos='fade-left' data-aos-delay={1000}>
-                    <ProductCard />
-                </div>
-            </SwiperSlide>
+
+            {
+                collection?.map((watch, index) =>
+                    <SwiperSlide key={watch.id} className='!flex justify-center'>
+                        <div data-aos='fade-left' data-aos-delay={index * 200}>
+                            <ProductCard data={watch} />
+                        </div>
+                    </SwiperSlide>
+                )
+            }
 
         </Swiper>
     );
