@@ -11,15 +11,21 @@ import store from "@/redux/app/store";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+// react query provider
+import { QueryClient, QueryClientProvider } from "react-query";
+const queryClient = new QueryClient();
+
 
 const Providers = ({ children }) => {
 
-    useEffect(() => {AOS.init({offset: 20, duration: 1000})}, []);
+    useEffect(() => { AOS.init({ offset: 20, duration: 1000 }) }, []);
 
 
     return (
         <Provider store={store}>
-            {children}
+            <QueryClientProvider client={queryClient}>
+                {children}
+            </QueryClientProvider>
         </Provider>
     );
 };
