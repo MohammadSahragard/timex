@@ -24,6 +24,7 @@ const Subscribe = () => {
                 </h2>
 
                 <small className='text-default' style={{width: '50ch'}}>
+                    {/* eslint-disable-next-line react/no-unescaped-entities */}
                     Subscribe our newsletter and don't miss any of our promotions or sales of Timex watches, Thank you!
                 </small>
 

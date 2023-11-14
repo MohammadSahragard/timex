@@ -6,9 +6,7 @@ import { fadeInTransition } from "@/animations/animate";
 
 
 // slice name for product card and highlight
-const stringSplitter = (text, from = 0, to = 2) => {
-    return text?.split(' ').slice(from, to).join(' ');
-};
+const stringSplitter = (text, from = 0, to = 2) => text?.split(' ').slice(from, to).join(' ');
 
 
 // pagination for slider
@@ -20,7 +18,7 @@ const startProduct = (currentPage, perPage) => currentPage === 1 ? 0 : (currentP
 
 
 // find product if its is in cart
-const isInCart = (product, cart) => cart.find(item => item.id === product.id);
+const isInCart = (productId, cart) => cart?.find(item => item.productId === productId);
 
 
 // get the main color of products

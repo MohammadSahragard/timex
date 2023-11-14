@@ -9,11 +9,11 @@ import Title from '@/components/ui/texts/Title';
 import Heading from '@/components/ui/texts/Heading';
 import Price from '@/components/ui/texts/Price';
 import LastPrice from '@/components/ui/texts/LastPrice';
-import Button from '@/components/ui/buttons/Button';
 import PageLink from '@/components/ui/links/PageLink';
 
 //* helper
 import { stringSplitter } from '@/helper/function';
+import AddProduct from '@/components/ui/buttons/AddProduct';
 
 
 const HighlightWatchInfo = ({ data }) => {
@@ -36,6 +36,7 @@ const HighlightWatchInfo = ({ data }) => {
                 >
                     <strong className='text-primary text-6xl font-black absolute top-0'>- 10%</strong>
                     <Title>
+                        {/* eslint-disable-next-line react/no-unescaped-entities */}
                         <span className='highlights-category font-bold'>{highlightWatch.category}'s </span>
                         <span className='font-light'>watches</span>
                     </Title>
@@ -59,12 +60,7 @@ const HighlightWatchInfo = ({ data }) => {
                     </div>
 
                     <div className='flex flex-col gap-4 items-start sm:flex-row sm:items-center'>
-                        {/* {
-                                isInCart(currentWatch, cart) ?
-                                    <Button icon='minus' clickEvent={() => dispatch(removeProduct(currentWatch))}>Remove</Button> :
-                                    <Button icon='plus' clickEvent={() => dispatch(addProduct(currentWatch))}>add</Button>
-                        } */}
-                        <Button icon='plus'>add</Button>
+                        <AddProduct watchData={currentWatch} />
                         <PageLink href='/'>see details</PageLink>
                     </div>
                 </div>

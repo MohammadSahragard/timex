@@ -17,6 +17,7 @@ import 'swiper/css/navigation';
 
 const Slider = ({ data, isCollection }) => {
 
+    // filter watches (selected collection)
     const selectedCollection = useSelector(state => state.options.selectedCollection);
     const collection = isCollection ? data?.filter(watch => watch.collection === selectedCollection) : data;
 

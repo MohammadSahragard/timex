@@ -3,16 +3,13 @@ import { Card, CardBody, CardFooter } from '@nextui-org/card';
 
 //* components
 import Link from 'next/link';
-import Image from 'next/image';
+import { Image } from '@nextui-org/react';
 import Tooltip from '@/components/ui/texts/Tooltip';
-import Button from '@/components/ui/buttons/Button';
 import Rate from '@/components/ui/value/Rate';
 import ProductName from '@/components/ui/texts/ProductName';
 import Price from '@/components/ui/texts/Price';
 import LastPrice from '@/components/ui/texts/LastPrice';
-
-//* helper
-import { stringSplitter } from '@/helper/function';
+import AddProduct from '@/components/ui/buttons/AddProduct';
 
 
 const ProductCard = ({ data }) => {
@@ -27,7 +24,7 @@ const ProductCard = ({ data }) => {
                 <Link href='/'>
                     <Image
                         className='relative'
-                        src='/day-date.webp'
+                        src={data?.image}
                         alt='Product image'
                         width={250}
                         height={300}
@@ -36,23 +33,22 @@ const ProductCard = ({ data }) => {
             </div>
 
             <CardBody className='flex flex-col items-center gap-4'>
-                <Tooltip content='Product Name (complete name)' placement='top'>
+                <Tooltip content={data?.name ?? ''} placement='top'>
                     <Link href='/'>
-                        {/* <ProductName>{stringSplitter(data?.name, 2, 4)}</ProductName> */}
-                        <ProductName>Product Name</ProductName>
+                        <ProductName>{data?.name?.split(' ').slice(2, 4).join(' ')}</ProductName>
                     </Link>
                 </Tooltip>
 
                 <section className='flex gap-2'>
-                    <Price value={58} />
-                    <LastPrice value={120} />
+                    <Price value={data?.price ?? 0} />
+                    <LastPrice value={data?.price ?? 0 + 50} />
                 </section>
 
-                <Rate value={4} />
+                <Rate value={data?.rate ?? 5} />
             </CardBody>
 
             <CardFooter className='flex justify-center'>
-                <Button icon='plus'>Add</Button>
+                <AddProduct watchData={data} />
             </CardFooter>
         </Card>
     );

@@ -6,31 +6,14 @@ import SliderControlBar from "./SliderControlBar";
 
 
 //* get data (4 watches with the highest price. (4 men and 4 women))
-const getMenWatches = async () => {
-    const res = await fetch('https://watches-db.vercel.app/watches?category=Men&_sort=price&_order=desc&_end=4');
-
-    if (!res.ok) {
-        throw new Error('Failed to fetch');
-    };
-
-    return res.json();
-};
-const getWomenWatches = async () => {
-    const res = await fetch('https://watches-db.vercel.app/watches?category=Women&_sort=price&_order=desc&_end=4');
-
-    if (!res.ok) {
-        throw new Error('Failed to fetch');
-    };
-
-    return res.json();
-};
+import { getHighlightsWatches } from "@/app/libs/highlights-watches/getHighlightsWatches";
 
 
 
 const HighlightWatches = async () => {
 
-    const menWatches = await getMenWatches();
-    const womenWatches = await getWomenWatches();
+    const highlightWatches = await getHighlightsWatches();
+    const { menWatches, womenWatches } = highlightWatches;
 
 
     return (
@@ -47,6 +30,7 @@ const HighlightWatches = async () => {
                 <SliderControlBar />
             </div>
 
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
             <SectionTitle position='bottom-24 right-[3%]'>Welcome to Timex's world</SectionTitle>
         </div>
     );
