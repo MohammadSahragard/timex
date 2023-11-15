@@ -9,10 +9,10 @@ const Menu = ({ onModal }) => {
 
     const Links = [
         { label: 'Home', href: '/' },
-        { label: 'Men', href: '/collection/men' },
-        { label: 'Women', href: '/collection/women' },
-        { label: 'Kids', href: '/collection/kids' },
-        { label: 'Sale', href: '/collection/sale' }
+        { label: 'Men', href: '/category/men' },
+        { label: 'Women', href: '/category/women' },
+        { label: 'Kids', href: '/category/kids' },
+        { label: 'Sale', href: '/category/sale' }
     ];
 
 

@@ -8,9 +8,9 @@ import SectionTitle from '@/components/ui/texts/SectionTitle';
 const Categories = () => {
 
     const categories = [
-        { src: '/expedition-2.webp', title: 'for men', href: '/collection/men' },
-        { src: '/women-category.webp', title: 'for women', href: '/collection/women' },
-        { src: '/sale-category.webp', title: 'watches on sale', href: '/collection/sale' },
+        { src: '/expedition-2.webp', title: 'for men', href: '/category/men' },
+        { src: '/women-category.webp', title: 'for women', href: '/category/women' },
+        { src: '/sale-category.webp', title: 'watches on sale', href: '/category/sale' },
     ];
 
 
