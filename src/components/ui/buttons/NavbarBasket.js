@@ -1,17 +1,30 @@
 'use client';
 
+// public
+import { useQuery } from "react-query";
+
 //* components
 import Tooltip from '@/components/ui/texts/Tooltip';
 import { Badge } from '@nextui-org/react';
 
 //* helper
-import { modalToggler } from '@/helper/function';
+import { modalToggler, calculateBasket } from '@/helper/function';
+
+//* api
+import { getBasketProducts } from "@/app/libs/basket/getBasketProducts";
+
 
 
 const NavbarBasket = () => {
+
+    const { data: cartProducts, isLoading } = useQuery('cart', getBasketProducts);
+    const { totalItems, totalPrice } = calculateBasket(isLoading ? [] : cartProducts);
+
+
+
     return (
         <div className='w-max active:scale-95 transition-all'>
-            <Badge content='2' color='warning' className='sm:hidden'>
+            <Badge content={totalItems} color='warning' className='sm:hidden'>
                 <Tooltip content='Basket'>
 
 
@@ -25,12 +38,12 @@ const NavbarBasket = () => {
                         ])}
                     >
                         <div className='w-9 h-9 bg-primary grid place-items-center text-white rounded-full'>
-                            <strong className='hidden sm:block'>2</strong>
+                            <strong className='hidden sm:block'>{totalItems}</strong>
                             <span className='sm:hidden'>
                                 <i className='far fa-cart-shopping'></i>
                             </span>
                         </div>
-                        <strong className='hidden sm:block'>$223.00</strong>
+                        <strong className='hidden sm:block'>${totalPrice?.toFixed(2)}</strong>
                     </div>
 
 

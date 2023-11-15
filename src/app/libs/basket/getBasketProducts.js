@@ -1,7 +1,5 @@
 export const getBasketProducts = async () => {
-    const res = await fetch('https://watches-db.vercel.app/cart', {
-        cache: 'no-cache',
-    });
+    const res = await fetch('https://watches-db.vercel.app/cart');
 
     if (!res.ok) {
         throw new Error('Failed to fetch');

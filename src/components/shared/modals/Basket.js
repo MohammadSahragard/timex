@@ -3,15 +3,15 @@ import Logo from "@/components/ui/links/Logo";
 import ModalCloserButton from "@/components/ui/buttons/ModalCloserButton";
 import BasketStepper from "../basket/BasketStepper";
 import Heading from "@/components/ui/texts/Heading";
-import BasketCard from "../cards/BasketCard";
 import BasketProductsHeader from "../headers/BasketProductsHeader";
-import BasketStatus from "../cards/BasketStatus";
+import BasketStatus from "../basket/BasketStatus";
 import { ScrollShadow } from "@nextui-org/react";
 import SectionTitle from "@/components/ui/texts/SectionTitle";
+import BasketProducts from "../basket/BasketProducts";
 
 
 
-const Basket = () => {
+const Basket = async () => {
     return (
         <div className='basket fixed inset-0 translate-x-full bg-white transition-transform z-40' style={{ transitionDuration: '700ms' }}>
 
@@ -50,11 +50,7 @@ const Basket = () => {
 
                 <ScrollShadow orientation='horizontal' className='overflow-auto py-2'>
                     <BasketProductsHeader />
-                    <BasketCard />
-                    <BasketCard />
-                    <BasketCard />
-                    <BasketCard />
-                    <BasketCard />
+                    <BasketProducts />
                 </ScrollShadow>
 
                 <BasketStatus />
