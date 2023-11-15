@@ -18,7 +18,7 @@ const ModalCloserButton = ({ closerClass, modalClass, otherClass }) => {
         setTimeout(() => {
             modal.style.transform = 'translateX(100%)';
             app.classList.remove('popup-shown');
-        }, 1000);
+        }, 500);
 
         fadeOutTransition(`.${closerClass}`);
         otherClass?.map(className => fadeOutTransition(className));

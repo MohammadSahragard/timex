@@ -24,7 +24,7 @@ const NavbarBasket = () => {
 
     return (
         <div className='w-max active:scale-95 transition-all'>
-            <Badge content={totalItems} color='warning' className='sm:hidden'>
+            <Badge content={totalItems ?? 0} color='warning' className='sm:hidden'>
                 <Tooltip content='Basket'>
 
 
@@ -38,12 +38,12 @@ const NavbarBasket = () => {
                         ])}
                     >
                         <div className='w-9 h-9 bg-primary grid place-items-center text-white rounded-full'>
-                            <strong className='hidden sm:block'>{totalItems}</strong>
+                            <strong className='hidden sm:block'>{totalItems ?? 0}</strong>
                             <span className='sm:hidden'>
                                 <i className='far fa-cart-shopping'></i>
                             </span>
                         </div>
-                        <strong className='hidden sm:block'>${totalPrice?.toFixed(2)}</strong>
+                        <strong className='hidden sm:block'>${totalPrice?.toFixed(2) ?? 0}</strong>
                     </div>
 
 

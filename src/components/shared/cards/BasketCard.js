@@ -1,21 +1,20 @@
-//* next ui components
-import { Card, CardBody } from '@nextui-org/card';
-
 //* components
 import Link from 'next/link';
 import { Image } from '@nextui-org/react';
 import Title from '@/components/ui/texts/Title';
 import ProductName from '@/components/ui/texts/ProductName';
-import Button from '@/components/ui/buttons/Button';
 import { Button as NextUiButton } from '@nextui-org/button';
 import Tooltip from '@/components/ui/texts/Tooltip';
 import Rate from '@/components/ui/value/Rate';
 import Price from '@/components/ui/texts/Price';
+import ChangeQuantityProducts from '../basket/ChangeQuantityProduct';
+import RemoveProductButton from '../basket/RemoveProductButton';
 
 
 const BasketCard = ({ data }) => {
 
     const {
+        id,
         image,
         name,
         rate,
@@ -51,25 +50,13 @@ const BasketCard = ({ data }) => {
                 </Link>
             </div>
 
-
-            <div className='flex items-center gap-2'>
-                <Button isIconOnly />
-
-                <ProductName>{quantity ?? 0}</ProductName>
-
-                <Button isIconOnly icon='plus' />
-            </div>
+            <ChangeQuantityProducts id={id} quantity={quantity ?? 0} />
 
             <Title>${price?.toFixed(2)}</Title>
 
-            <Price value={price*quantity} />
+            <Price value={price * quantity} />
 
-            <NextUiButton
-                isIconOnly
-                className='bg-transparent text-foreground text-2xl'
-            >
-                <i className='fat fa-xmark-large'></i>
-            </NextUiButton>
+            <RemoveProductButton id={id} />
         </div>
     );
 };
