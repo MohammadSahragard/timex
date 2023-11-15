@@ -6,7 +6,7 @@ import { useQuery, useMutation, useQueryClient } from "react-query";
 
 //* components
 import ProductCard from "../cards/ProductCard";
-import NoResult from "@/components/no-result/NoResult";
+import NoResult from "@/components/shared/no-result/NoResult";
 
 //* api
 import { getWatches } from "@/app/libs/all-watches/getWatches";

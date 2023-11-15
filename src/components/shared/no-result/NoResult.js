@@ -1,6 +1,6 @@
 //* components
 import NoResultIcon from "./NoResultIcon";
-import Subtitle from "../ui/texts/Subtitle";
+import Subtitle from "../../ui/texts/Subtitle";
 
 
 

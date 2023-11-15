@@ -5,8 +5,8 @@ import SocialMediaLinks from "@/components/ui/links/SocialMediaLinks";
 import SmallTitle from "@/components/ui/texts/SmallTitle";
 import QuickLink from "@/components/ui/links/QuickLink";
 import ModalCloserButton from "@/components/ui/buttons/ModalCloserButton";
-import Weekender from "@/components/home/weekender-archive/Weekender";
-import Archive from "@/components/home/weekender-archive/Archive";
+import Weekender from "@/components/pages/home/weekender-archive/Weekender";
+import Archive from "@/components/pages/home/weekender-archive/Archive";
 import SectionTitle from "@/components/ui/texts/SectionTitle";
 
 
