@@ -3,8 +3,8 @@ import Logo from "@/components/ui/links/Logo";
 import ModalCloserButton from "@/components/ui/buttons/ModalCloserButton";
 import Menu from "../navigation-bar/Menu";
 import SearchbarInput from "@/components/ui/inputs/SearchbarInput";
-import ProductCard from "../cards/ProductCard";
 import SectionTitle from "@/components/ui/texts/SectionTitle";
+import SearchedProducts from "../searchbar/SearchedProducts";
 
 
 
@@ -35,34 +35,7 @@ const SearchBar = () => {
 
             <div className='searchbar_content px-[40px] lg:px-[150px] absolute inset-0 pt-16 grid grid-rows-[max-content_auto]'>
                 <SearchbarInput />
-                <div className='flex flex-col items-center gap-5 overflow-auto py-5 sm:items-start sm:flex-row sm:flex-wrap'>
-                    <div className='flex justify-start'>
-                        <ProductCard />
-                    </div>
-                    <div className='flex justify-start'>
-                        <ProductCard />
-                    </div>
-                    <div className='flex justify-start'>
-                        <ProductCard />
-                    </div>
-                    <div className='flex justify-start'>
-                        <ProductCard />
-                    </div>
-                    <div className='flex justify-start'>
-                        <ProductCard />
-                    </div>
-                    {/* {
-                        searched ?
-                            searchedWatches.map(product =>
-                                <div
-                                    key={product.id}
-                                    className='flex justify-center'
-                                >
-                                    <ProductCard data={product} />
-                                </div>
-                            ) : null
-                    } */}
-                </div>
+                <SearchedProducts />
             </div>
 
             <SectionTitle position='right-[3%] bottom-16'>Find your new watch</SectionTitle>

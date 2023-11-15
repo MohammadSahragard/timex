@@ -13,7 +13,7 @@ import { changeQuery } from "@/redux/features/options/optionsSlice";
 const SearchbarInput = () => {
 
     const dispatch = useDispatch();
-    const query = useSelector(state => state.options.SearchbarQuery);
+    const query = useSelector(state => state.options.searchbarQuery);
 
 
     return (
@@ -22,7 +22,7 @@ const SearchbarInput = () => {
                 className='bg-transparent border-none outline-none text-xl font-bold'
                 type='search'
                 value={query}
-                onChange={e => dispatch(changeQuery(e.target.value))}
+                onChange={({ target }) => dispatch(changeQuery(target.value))}
             />
             <Button
                 color='primary'
