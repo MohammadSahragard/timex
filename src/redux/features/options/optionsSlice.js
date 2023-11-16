@@ -5,8 +5,10 @@ import {
     categoryChangerSlider
 } from '@/animations/animate';
 
-
+// public
 import { createSlice } from '@reduxjs/toolkit';
+
+
 
 const initialState = {
     searchbarQuery: '',
