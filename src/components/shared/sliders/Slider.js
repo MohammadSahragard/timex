@@ -32,7 +32,7 @@ const Slider = ({ data, isCollection }) => {
                 640: {
                     slidesPerView: 2,
                 },
-                1080: {
+                800: {
                     slidesPerView: 3,
                 },
                 1536: {

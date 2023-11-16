@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { Image } from '@nextui-org/react';
 import Title from '@/components/ui/texts/Title';
 import ProductName from '@/components/ui/texts/ProductName';
-import { Button as NextUiButton } from '@nextui-org/button';
 import Tooltip from '@/components/ui/texts/Tooltip';
 import Rate from '@/components/ui/value/Rate';
 import Price from '@/components/ui/texts/Price';
@@ -43,8 +42,8 @@ const BasketCard = ({ data }) => {
                     className='flex flex-col gap-3'
                     href={`/${name?.split(' ').join('-')}`}
                 >
-                    <Tooltip content='Product name'>
-                        <ProductName>{name?.split(' ').slice(2, 4).join(' ')}</ProductName>
+                    <Tooltip content={name}>
+                        <div><ProductName>{name?.split(' ').slice(2, 4).join(' ')}</ProductName></div>
                     </Tooltip>
                     <Rate value={rate ?? 5} />
                 </Link>

@@ -46,6 +46,10 @@ const modalToggler = (modalClass, otherClass) => {
 };
 
 
+//! find filter option from filters box for active and inactive
+const isActiveFilter = (filter, filters) => filters?.find(item => item === filter);
+
+
 
 export {
     stringSplitter,
@@ -54,5 +58,6 @@ export {
     isInCart,
     calculateBasket,
     getProductMainColor,
-    modalToggler
+    modalToggler,
+    isActiveFilter
 };

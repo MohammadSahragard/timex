@@ -19,17 +19,17 @@ const ProductCard = ({ data }) => {
             shadow='none'
             className='w-max h-max bg-transparent'
         >
-            <div className='relative mb-4'>
-                <div className='absolute top-2/4 -translate-y-2/4 rounded-full bg-default/60 w-full aspect-square'></div>
+            <div className='relative mb-4 flex justify-center h-[240px]'>
                 <Link href='/'>
                     <Image
                         className='relative'
                         src={data?.image}
                         alt='Product image'
-                        width={250}
+                        width={200}
                         height={300}
                     />
                 </Link>
+                <div className='absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 rounded-full bg-default/60 h-3/4 aspect-square'></div>
             </div>
 
             <CardBody className='flex flex-col items-center gap-4'>
