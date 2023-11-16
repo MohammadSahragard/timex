@@ -28,7 +28,7 @@ const RemoveProductButton = ({ id }) => {
             className='bg-transparent text-foreground text-2xl'
             onClick={() => removeProduct.mutate(id)}
         >
-            <i className={removeProduct.isLoading ? 'fad fa-spinner-third animate-spin' : 'fat fa-xmark-large'}></i>
+            <i className={removeProduct.isLoading ? 'fad fa-spinner-third fa-spin' : 'fat fa-xmark-large'}></i>
         </Button>
     );
 };

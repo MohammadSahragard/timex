@@ -2,7 +2,7 @@
 
 // public
 import { useSelector } from "react-redux";
-import { useQuery, useMutation, useQueryClient } from "react-query";
+import { useQuery } from "react-query";
 
 //* components
 import ProductCard from "../cards/ProductCard";

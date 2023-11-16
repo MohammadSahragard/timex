@@ -7,6 +7,7 @@ import {
 
 // public
 import { createSlice } from '@reduxjs/toolkit';
+import { QueryClient } from 'react-query';
 
 
 
@@ -58,7 +59,10 @@ const optionsSlice = createSlice({
             state.selectedCollection = action.payload;
         },
         changeSelectedSortingCategory: (state, action) => {
-            state.selectedSortingCategory = action.payload
+            state.selectedSortingCategory = action.payload;
+
+            const queryClient = new QueryClient();
+            queryClient.invalidateQueries('category-watches');
         }
     },
 });
