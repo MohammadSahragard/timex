@@ -1,8 +1,9 @@
 //* components
 import Heading from "@/components/ui/texts/Heading";
-import { Button, Input, Divider } from "@nextui-org/react";
+import { Input, Divider } from "@nextui-org/react";
 import CategoryFilters from "./filters-bar/CategoryFilters";
 import FiltersBarToggler from "./filters-bar/FiltersBarToggler";
+import CategorySortBar from "./CategorySortBar";
 
 
 
@@ -36,6 +37,8 @@ const CategoryHeader = ({ category }) => {
             </div>
 
             <CategoryFilters />
+
+            <CategorySortBar />
         </header>
     );
 };

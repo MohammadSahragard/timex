@@ -17,6 +17,7 @@ const initialState = {
         category: 'men'
     },
     selectedCollection: 'UFC',
+    selectedSortingCategory: 'popular'
 };
 
 
@@ -56,6 +57,9 @@ const optionsSlice = createSlice({
         changeSelectedCollection: (state, action) => {
             state.selectedCollection = action.payload;
         },
+        changeSelectedSortingCategory: (state, action) => {
+            state.selectedSortingCategory = action.payload
+        }
     },
 });
 
@@ -63,6 +67,7 @@ const optionsSlice = createSlice({
 export const {
     changeQuery,
     changeHighlightWatch,
-    changeSelectedCollection
+    changeSelectedCollection,
+    changeSelectedSortingCategory
 } = optionsSlice.actions;
 export default optionsSlice.reducer;
