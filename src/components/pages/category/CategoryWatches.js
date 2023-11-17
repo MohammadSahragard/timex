@@ -1,6 +1,6 @@
 'use client';;
 // public
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useQuery } from "react-query";
 
 //* components
@@ -10,19 +10,34 @@ import Loading from "@/components/shared/no-result/Loading";
 
 //* api
 import { getCategoryWatches } from "@/app/libs/category-watches/getCategoryWatches";
+import { getCategoryLengthItems } from "@/app/libs/category-watches/getCategoryLengthItems";
+
+//* actions
+import { setTotalItems } from "@/redux/features/filters/filtersSlice";
+
 
 
 const CategoryWatches = ({ category }) => {
 
-    // query dependencies
+    const dispatch = useDispatch();
+    //? -------------------------- query dependencies -------------------- */
     const sortBy = useSelector(state => state.options.selectedSortingCategory);
     const { pageNumber, perPage } = useSelector(state => state.filtersBar.activeFilters['category paginate']);
 
-    // query
+
+    //? -------------------------- queries ------------------------------- */
+    // get category watches
     const { data, isLoading } = useQuery(
         ['categoryWatches', category, pageNumber, perPage, sortBy],
         () => getCategoryWatches(category, sortBy, pageNumber, perPage)
     );
+    // get category watches length (for pagination (length items))
+    const {
+        data: getLength,
+        isLoading: lengthLoading
+    } = useQuery('watchesLength', () => getCategoryLengthItems(category));
+    !lengthLoading && dispatch(setTotalItems(getLength?.length ?? 15));
+
 
 
 

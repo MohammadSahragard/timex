@@ -7,6 +7,10 @@ import {
 // public
 import { createSlice } from "@reduxjs/toolkit";
 
+// helper
+import { getPagesCount } from '@/helper/function';
+
+
 
 const initialState = {
     showFiltersBar: false,
@@ -17,6 +21,7 @@ const initialState = {
         'case material': [],
         'features': [],
         'category paginate': {
+            totalItems: 15,
             pageNumber: 1,
             perPage: 8,
         }
@@ -65,12 +70,14 @@ const filtersSlice = createSlice({
             }
         },
         // category pagination
-        setPagination: (state, action) => {
-            const type = action.payload;
+        setPagination: (state, { payload }) => {
+            const type = payload;
+            const totalItems = state.activeFilters['category paginate'].totalItems;
+            const perPage = state.activeFilters['category paginate'].perPage;
 
             switch (type) {
                 case 'NEXT_PAGE':
-                    if (state.activeFilters['category paginate'].pageNumber < 2) {
+                    if (state.activeFilters['category paginate'].pageNumber < getPagesCount(perPage, totalItems)) {
                         nextSlideCounter();
                         return {
                             ...state,
@@ -107,11 +114,15 @@ const filtersSlice = createSlice({
                             ...state.activeFilters,
                             ['category paginate']: {
                                 ...state.activeFilters['category paginate'],
-                                perPage: action.payload ? action.payload : 8,
+                                pageNumber: 1,
+                                perPage: payload ? payload : 8,
                             }
                         }
                     }
             }
+        },
+        setTotalItems: ({ activeFilters }, { payload }) => {
+            activeFilters['category paginate'].totalItems = payload;
         }
     }
 });
@@ -121,6 +132,7 @@ export const {
     toggleFiltersBar,
     addFilter,
     clearFilters,
-    setPagination
+    setPagination,
+    setTotalItems
 } = filtersSlice.actions;
 export default filtersSlice.reducer;

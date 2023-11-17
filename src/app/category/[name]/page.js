@@ -1,7 +1,9 @@
+//* components
 import CategoryCollections from "@/components/pages/category/CategoryCollections";
 import CategoryHeader from "@/components/pages/category/CategoryHeader";
 import CategoryPagination from "@/components/pages/category/CategoryPagination";
 import CategoryWatches from "@/components/pages/category/CategoryWatches";
+
 
 const Category = ({ params }) => {
 

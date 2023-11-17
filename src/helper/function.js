@@ -9,12 +9,8 @@ import { fadeInTransition } from "@/animations/animate";
 const stringSplitter = (text, from = 0, to = 2) => text?.split(' ').slice(from, to).join(' ');
 
 
-//! pagination for slider
-const totalPage = (length, perPage) => Math.ceil(length / perPage);
-
-
-//! start product from ... (in pagination)
-const startProduct = (currentPage, perPage) => currentPage === 1 ? 0 : (currentPage - 1) * perPage;
+//! get pages count (for pagination route category)
+const getPagesCount = (perPage, totalItems) => Math.ceil(totalItems / perPage);
 
 
 //! find product if its is in cart
@@ -26,10 +22,6 @@ const calculateBasket = items => {
 
     return { totalItems, totalPrice };
 };
-
-
-//! get the main color of products
-const getProductMainColor = colors => colors.split('/')[0].split('-')[0];
 
 
 //! modal toggler function
@@ -53,11 +45,9 @@ const isActiveFilter = (filter, filters) => filters?.find(item => item === filte
 
 export {
     stringSplitter,
-    totalPage,
-    startProduct,
+    getPagesCount,
     isInCart,
     calculateBasket,
-    getProductMainColor,
     modalToggler,
     isActiveFilter
 };
