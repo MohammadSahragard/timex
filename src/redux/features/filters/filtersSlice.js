@@ -1,3 +1,9 @@
+// animations
+import {
+    nextSlideCounter,
+    prevSlideCounter
+} from '@/animations/animate';
+
 // public
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -9,7 +15,11 @@ const initialState = {
         'case diameter': [],
         'case size': [],
         'case material': [],
-        'features': []
+        'features': [],
+        'category paginate': {
+            pageNumber: 1,
+            perPage: 8,
+        }
     }
 };
 
@@ -25,7 +35,7 @@ const filtersSlice = createSlice({
         },
 
 
-        // toggle filters
+        // add some filter
         addFilter: ({ activeFilters }, { payload }) => {
 
             if (['colors', 'features'].includes(payload.category)) {
@@ -48,7 +58,59 @@ const filtersSlice = createSlice({
                 'case diameter': [],
                 'case size': [],
                 'case material': [],
-                'features': []
+                'features': [],
+                'category paginate': {
+                    ...state.activeFilters['category paginate']
+                }
+            }
+        },
+        // category pagination
+        setPagination: (state, action) => {
+            const type = action.payload;
+
+            switch (type) {
+                case 'NEXT_PAGE':
+                    if (state.activeFilters['category paginate'].pageNumber < 2) {
+                        nextSlideCounter();
+                        return {
+                            ...state,
+                            activeFilters: {
+                                ...state.activeFilters,
+                                ['category paginate']: {
+                                    ...state.activeFilters['category paginate'],
+                                    pageNumber: state.activeFilters['category paginate'].pageNumber + 1,
+                                }
+                            }
+                        }
+                    };
+                    break;
+                case 'PREV_PAGE':
+                    if (state.activeFilters['category paginate'].pageNumber > 1) {
+                        prevSlideCounter();
+                        return {
+                            ...state,
+                            activeFilters: {
+                                ...state.activeFilters,
+                                ['category paginate']: {
+                                    ...state.activeFilters['category paginate'],
+                                    pageNumber: state.activeFilters['category paginate'].pageNumber - 1,
+                                }
+                            }
+                        }
+                    };
+                    break;
+                // change per page
+                default:
+                    return {
+                        ...state,
+                        activeFilters: {
+                            ...state.activeFilters,
+                            ['category paginate']: {
+                                ...state.activeFilters['category paginate'],
+                                perPage: action.payload ? action.payload : 8,
+                            }
+                        }
+                    }
             }
         }
     }
@@ -58,6 +120,7 @@ const filtersSlice = createSlice({
 export const {
     toggleFiltersBar,
     addFilter,
-    clearFilters
+    clearFilters,
+    setPagination
 } = filtersSlice.actions;
 export default filtersSlice.reducer;

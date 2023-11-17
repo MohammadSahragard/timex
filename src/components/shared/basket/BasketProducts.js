@@ -8,6 +8,7 @@ import BasketCard from "../cards/BasketCard";
 
 //* api
 import { getBasketProducts } from "@/app/libs/basket/getBasketProducts";
+import Loading from "../no-result/Loading";
 
 
 
@@ -17,7 +18,7 @@ const BasketProducts = () => {
 
 
     if (isLoading) {
-        return <p>loading...</p>;
+        return <Loading />;
     };
 
     return (

@@ -1,10 +1,11 @@
 //* components
 import Heading from "@/components/ui/texts/Heading";
-import { Input, Divider } from "@nextui-org/react";
+import { Divider } from "@nextui-org/react";
 import CategoryFilters from "./filters-bar/CategoryFilters";
 import FiltersBarToggler from "./filters-bar/FiltersBarToggler";
 import CategorySortBar from "./CategorySortBar";
 import SectionTitle from "@/components/ui/texts/SectionTitle";
+import PerPageInput from "./filters-bar/PerPageInput";
 
 
 
@@ -15,21 +16,7 @@ const CategoryHeader = ({ category }) => {
                 <Heading>{`${category ?? 'men'}'s watches`}</Heading>
 
                 <div className='flex items-center gap-4'>
-                    <Input
-                        label='items on pages'
-                        labelPlacement='outside-left'
-                        radius='none'
-                        variant='bordered'
-                        type='number'
-                        classNames={{
-                            base: 'w-max',
-                            inputWrapper: 'min-h-max py-1 text-primary',
-                            input: 'font-bold'
-                        }}
-                        min={9}
-                        max={15}
-                        defaultValue={9}
-                    />
+                    <PerPageInput />
 
                     <Divider orientation='vertical' className='h-5' />
 

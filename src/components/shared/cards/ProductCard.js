@@ -29,7 +29,7 @@ const ProductCard = ({ data }) => {
                         height={300}
                     />
                 </Link>
-                <div className='absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 rounded-full bg-default/60 h-3/4 aspect-square'></div>
+                <div className='absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 rounded-full bg-default/20 h-3/4 aspect-square'></div>
             </div>
 
             <CardBody className='flex flex-col items-center gap-4'>

@@ -4,7 +4,8 @@
 import { useMutation, useQueryClient } from "react-query";
 
 //* components
-import Button from "@/components/ui/buttons/Button";
+import { Button } from "@nextui-org/react";
+// import Button from "@/components/ui/buttons/Button";
 import ProductName from "@/components/ui/texts/ProductName";
 
 //* api
@@ -29,6 +30,15 @@ const ChangeQuantityProducts = ({ id, quantity }) => {
         <div className='flex items-center gap-2'>
             <Button
                 isIconOnly
+                size='sm'
+                radius='full'
+                color='primary'
+                variant='ghost'
+                startContent={
+                    decrease.isLoading ?
+                        <i className="fad fa-spinner-third fa-spin"></i> :
+                        <i className="fa fa-minus"></i>
+                }
                 onClick={() => quantity > 1 && decrease.mutate()}
             />
 
@@ -36,7 +46,15 @@ const ChangeQuantityProducts = ({ id, quantity }) => {
 
             <Button
                 isIconOnly
-                icon='plus'
+                size='sm'
+                radius='full'
+                color='primary'
+                variant='ghost'
+                startContent={
+                    increase.isLoading ?
+                        <i className="fad fa-spinner-third fa-spin"></i> :
+                        <i className="fa fa-plus"></i>
+                }
                 onClick={() => increase.mutate()}
             />
         </div>

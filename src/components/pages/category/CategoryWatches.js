@@ -6,6 +6,7 @@ import { useQuery } from "react-query";
 //* components
 import ProductCard from "@/components/shared/cards/ProductCard";
 import SectionTitle from "@/components/ui/texts/SectionTitle";
+import Loading from "@/components/shared/no-result/Loading";
 
 //* api
 import { getCategoryWatches } from "@/app/libs/category-watches/getCategoryWatches";
@@ -13,19 +14,23 @@ import { getCategoryWatches } from "@/app/libs/category-watches/getCategoryWatch
 
 const CategoryWatches = ({ category }) => {
 
-    const selectedSorting = useSelector(state => state.options.selectedSortingCategory);
-    const { data, isLoading } = useQuery('category-watches', () => getCategoryWatches(category, selectedSorting));
+    // query dependencies
+    const sortBy = useSelector(state => state.options.selectedSortingCategory);
+    const { pageNumber, perPage } = useSelector(state => state.filtersBar.activeFilters['category paginate']);
 
-    // data
-    // const watches = data?.filter(watch => watch.name.toLowerCase().includes(query.toLowerCase()));
+    // query
+    const { data, isLoading } = useQuery(
+        ['categoryWatches', category, pageNumber, perPage, sortBy],
+        () => getCategoryWatches(category, sortBy, pageNumber, perPage)
+    );
 
 
 
     return (
-        <div className={`relative py-5 gap-5 ${data?.length < 4 ? 'flex items-start flex-wrap' : 'grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))]'}`}>
+        <div className={`relative py-5 gap-5 min-h-[80vh] ${data?.length < 4 ? 'flex items-start flex-wrap' : 'grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))]'}`}>
             {
-                isLoading ? <p>loading...</p> :
-                    data.map((product, index) =>
+                isLoading ? <Loading /> :
+                    data.map((product) =>
                         <div key={product.id} className='flex justify-center' data-aos='fade-right'>
                             <ProductCard data={product} />
                         </div>

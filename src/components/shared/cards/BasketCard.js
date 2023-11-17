@@ -26,7 +26,7 @@ const BasketCard = ({ data }) => {
         <div className='min-w-min h-max grid grid-cols-[minmax(320px,auto)_150px_100px_100px_60px] items-center gap-5 py-5 border-b'>
             <div className='flex items-center gap-5'>
                 <div className='relative'>
-                    <div className='absolute top-2/4 -translate-y-2/4 rounded-full bg-default/60 w-full aspect-square'></div>
+                    <div className='absolute top-2/4 -translate-y-2/4 rounded-full bg-default/20 w-full aspect-square'></div>
                     <Link href='/'>
                         <Image
                             className='relative'

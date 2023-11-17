@@ -6,10 +6,14 @@ import { TextPlugin } from "gsap/TextPlugin";
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 
+//* slider counter animation
+const nextSlideCounter = () => gsap.fromTo('.slider-counter', { x: '-100%' }, { x: '100%', duration: 1 });
+const prevSlideCounter = () => gsap.fromTo('.slider-counter', { x: '100%' }, { x: '-100%', duration: 1 });
 
-//* highlights slider counter
+
+//* animations of highlights section
 const nextHighlightSlider = () => {
-    gsap.fromTo('.slider-counter', { x: '-100%' }, { x: '100%', duration: 1 });
+    nextSlideCounter();
     gsap.fromTo('.highlight-image',
         { xPercent: -50, opacity: 0 },
         { xPercent: 0, opacity: 1, duration: 1 }
@@ -18,7 +22,7 @@ const nextHighlightSlider = () => {
 };
 
 const prevHighlightSlider = () => {
-    gsap.fromTo('.slider-counter', { x: '100%' }, { x: '-100%', duration: 1 });
+    prevSlideCounter();
     gsap.fromTo('.highlight-image',
         { xPercent: 50, opacity: 0 },
         { xPercent: 0, opacity: 1, duration: 1 }
@@ -43,6 +47,8 @@ const fadeOutTransition = (className) => gsap.fromTo(className, { opacity: 1 }, 
 
 
 export {
+    nextSlideCounter,
+    prevSlideCounter,
     nextHighlightSlider,
     prevHighlightSlider,
     categoryChangerSlider,

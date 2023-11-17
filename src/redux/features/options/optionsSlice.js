@@ -60,9 +60,6 @@ const optionsSlice = createSlice({
         },
         changeSelectedSortingCategory: (state, action) => {
             state.selectedSortingCategory = action.payload;
-
-            const queryClient = new QueryClient();
-            queryClient.invalidateQueries('category-watches');
         }
     },
 });
