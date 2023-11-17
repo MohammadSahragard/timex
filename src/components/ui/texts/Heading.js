@@ -1,4 +1,4 @@
-const Heading = ({ children, customSize, rowDirection }) => {
+const Heading = ({ children, customSize, rowDirection, boldInline }) => {
 
     const splitHeading = children?.split(' ');
     const lightHeading = splitHeading?.[0];
@@ -9,7 +9,9 @@ const Heading = ({ children, customSize, rowDirection }) => {
                         ${rowDirection ? 'gap-2' : 'flex-col'}`
         }>
             <span className='font-light'>{lightHeading}</span>
-            {boldHeading?.map(heading => <span key={heading} className='font-black'>{heading}</span>)}
+            <section className={`flex gap-2 ${boldInline ? null : 'flex-col'}`}>
+                {boldHeading?.map(heading => <span key={heading} className='font-black'>{heading}</span>)}
+            </section>
         </h2>
     );
 };

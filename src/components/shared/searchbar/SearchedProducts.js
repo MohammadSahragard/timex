@@ -7,6 +7,7 @@ import { useQuery } from "react-query";
 //* components
 import ProductCard from "../cards/ProductCard";
 import NoResult from "@/components/shared/no-result/NoResult";
+import Loading from "../no-result/Loading";
 
 //* api
 import { getWatches } from "@/app/libs/all-watches/getWatches";
@@ -23,9 +24,17 @@ function SearchedProducts() {
 
 
     return (
-        <div className={`py-5 gap-5 overflow-auto ${watches?.length < 4 ? 'flex items-start flex-wrap' : 'grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))]'}`}>
+        <div
+            className={`
+                py-5 gap-5 overflow-auto 
+                ${watches?.length < 4 ?
+                    'grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] md:flex md:items-start md:flex-wrap' :
+                    'grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))]'
+                }
+            `}
+        >
             {
-                isLoading ? <p>loading...</p> :
+                isLoading ? <Loading /> :
                     !query ? null :
                         watches.length ?
                             watches.map(product =>

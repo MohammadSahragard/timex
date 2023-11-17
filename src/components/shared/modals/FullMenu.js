@@ -16,10 +16,10 @@ const FullMenu = () => {
     const links = {
         mainLinks: [
             { label: 'Home', href: '/' },
-            { label: 'Men', href: '/collection/men' },
-            { label: 'Women', href: '/collection/women' },
-            { label: 'Kids', href: '/collection/kids' },
-            { label: 'Sale', href: '/collection/sale' },
+            { label: 'Men', href: '/category/Men' },
+            { label: 'Women', href: '/category/Women' },
+            { label: 'Kids', href: '/category/Kids' },
+            { label: 'Sale', href: '/category/Sale' },
             { label: 'Collections', href: '/collection' },
             { label: 'Customize', href: '/customize' },
         ],

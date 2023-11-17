@@ -1,7 +1,6 @@
 //* components
 import SmallTitle from '@/components/ui/texts/SmallTitle';
 import QuickLink from '@/components/ui/links/QuickLink';
-import Subtitle from '@/components/ui/texts/Subtitle';
 import PageLink from '@/components/ui/links/PageLink';
 
 
@@ -12,10 +11,10 @@ const FooterContent = () => {
         {
             title: 'Shop',
             links: [
-                { label: 'Men', href: '/collection/men' },
-                { label: 'Women', href: '/collection/women' },
-                { label: 'Kids', href: '/collection/kids' },
-                { label: 'Sale', href: '/collection/sale' },
+                { label: 'Men', href: '/category/Men' },
+                { label: 'Women', href: '/category/Women' },
+                { label: 'Kids', href: '/category/Kids' },
+                { label: 'Sale', href: '/category/Sale' },
                 { label: 'Collections', href: '/collection' },
             ]
         },
