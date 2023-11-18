@@ -16,7 +16,7 @@ const SliderHeader = () => {
     return (
         <SectionsHeader
             heading={`The ${selectedCollection} Collection`}
-            headingProps={{ customSize: 'text-2xl', rowDirection: true }}
+            headingProps={{ customSize: 'text-2xl', rowDirection: true, boldInline: true }}
             link={{
                 name: 'browse',
                 href: `/collection/${selectedCollection.split(' ').join('-')}`

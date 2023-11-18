@@ -52,7 +52,7 @@ const HighlightWatchInfo = ({ data }) => {
                 >
                     <div className='highlight-name flex flex-col gap-10'>
                         <Heading>{stringSplitter('The ' + currentWatch?.name, 0, 3)}</Heading>
-    
+
                         <div className='flex gap-4'>
                             <Price value={currentWatch?.price ?? 0} />
                             <LastPrice value={currentWatch?.price + 50 ?? 0} />
@@ -61,7 +61,7 @@ const HighlightWatchInfo = ({ data }) => {
 
                     <div className='flex flex-col gap-4 items-start sm:flex-row sm:items-center'>
                         <AddProduct watchData={currentWatch} />
-                        <PageLink href='/'>see details</PageLink>
+                        <PageLink href={`/product/${currentWatch?.name?.split(' ').join('-') ?? ''}/${currentWatch?.id}`}>see details</PageLink>
                     </div>
                 </div>
             </div>

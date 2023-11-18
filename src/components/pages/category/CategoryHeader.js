@@ -11,7 +11,7 @@ import PerPageInput from "./filters-bar/PerPageInput";
 
 const CategoryHeader = ({ category }) => {
     return (
-        <header className='relative space-y-5'>
+        <header className='relative space-y-5' data-aos='fade-left'>
             <div className='flex justify-between items-end'>
                 <Heading>{`${category ?? 'men'}'s watches`}</Heading>
 

@@ -20,7 +20,7 @@ const ProductCard = ({ data }) => {
             className='w-max h-max bg-transparent'
         >
             <div className='relative mb-4 flex justify-center h-[240px]'>
-                <Link href='/'>
+                <Link href={`/product/${data?.name ?? ''}/${data?.id ?? 1}`}>
                     <Image
                         className='relative'
                         src={data?.image}
@@ -34,7 +34,7 @@ const ProductCard = ({ data }) => {
 
             <CardBody className='flex flex-col items-center gap-4'>
                 <Tooltip content={data?.name ?? ''} placement='top'>
-                    <Link href='/'>
+                    <Link href={`/product/${data?.name ?? ''}/${data?.id ?? 1}`}>
                         <ProductName>{data?.name?.split(' ').slice(2, 4).join(' ')}</ProductName>
                     </Link>
                 </Tooltip>
