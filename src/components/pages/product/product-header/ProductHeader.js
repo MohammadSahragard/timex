@@ -8,7 +8,7 @@ const ProductHeader = ({ id }) => {
     return (
         <div>
             <ProductMainInfo id={id} />
-            <ProductStatus />
+            <ProductStatus id={id} />
         </div>
     );
 };

@@ -1,18 +1,20 @@
 'use client';
 
 // public
-import { useQueryClient } from "react-query";
+import { useQuery } from "react-query";
 
 //* components
 import Rate from "@/components/ui/value/Rate";
 import { Divider } from "@nextui-org/react";
 
+//* api
+import { getWatchInfo } from "@/app/libs/watch/getWatchInfo";
 
 
-const ProductStatus = () => {
 
-    const queryClient = useQueryClient();
-    const watchInfo = queryClient.getQueryData('watchInfo');
+const ProductStatus = ({ id }) => {
+
+    const { data: watchInfo } = useQuery('watchInfo', () => getWatchInfo(id));
 
 
     return (

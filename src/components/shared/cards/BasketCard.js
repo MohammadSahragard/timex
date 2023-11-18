@@ -27,7 +27,7 @@ const BasketCard = ({ data }) => {
             <div className='flex items-center gap-5'>
                 <div className='relative'>
                     <div className='absolute top-2/4 -translate-y-2/4 rounded-full bg-default/20 w-full aspect-square'></div>
-                    <Link href={`/product/${name ?? ''}/${id ?? 1}`}>
+                    <Link href={`/product/${name?.split(' ').join('-') ?? ''}/${id ?? 1}`}>
                         <Image
                             className='relative'
                             src={image}
@@ -40,7 +40,7 @@ const BasketCard = ({ data }) => {
 
                 <Link
                     className='flex flex-col gap-3'
-                    href={`/product/${name ?? ''}/${id ?? 1}`}
+                    href={`/product/${name?.split(' ').join('-') ?? ''}/${id ?? 1}`}
                 >
                     <Tooltip content={name}>
                         <div><ProductName>{name?.split(' ').slice(2, 4).join(' ')}</ProductName></div>
