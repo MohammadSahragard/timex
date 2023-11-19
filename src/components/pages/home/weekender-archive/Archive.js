@@ -14,7 +14,7 @@ const Archive = ({ CTA }) => {
         <div className='relative bg-[#C2BFB3] flex justify-start items-center pl-[3%]'>
 
             <Image
-                src='/mountain.jpg'
+                src='/images/other/mountain.jpg'
                 fill
                 alt='Archive section background'
                 className='object-cover mix-blend-soft-light'
@@ -22,7 +22,7 @@ const Archive = ({ CTA }) => {
 
             <div className='absolute top-0 bottom-0 right-0 w-[300px]'>
                 <Image
-                    src='/archive.webp'
+                    src='/images/other/archive.webp'
                     fill
                     alt='Archive banner image'
                     className='object-contain !right-0'

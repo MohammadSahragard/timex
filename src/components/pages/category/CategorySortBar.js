@@ -8,13 +8,13 @@ import { ButtonGroup } from "@nextui-org/react";
 import { Button } from "@nextui-org/react";
 
 //* actions
-import { changeSelectedSortingCategory } from "@/redux/features/options/optionsSlice";
+import { changeSelectedSortingCategory } from "@/redux/features/filters/filtersSlice";
 
 
 const CategorySortBar = () => {
 
     const dispatch = useDispatch();
-    const selectedSortingCategory = useSelector(state => state.options.selectedSortingCategory);
+    const selectedSortingCategory = useSelector(state => state.filtersBar.selectedSortingCategory);
 
     const sorting = [
         'popular',

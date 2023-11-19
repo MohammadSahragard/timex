@@ -25,7 +25,8 @@ const initialState = {
             pageNumber: 1,
             perPage: 8,
         }
-    }
+    },
+    selectedSortingCategory: 'popular'
 };
 
 
@@ -123,6 +124,10 @@ const filtersSlice = createSlice({
         },
         setTotalItems: ({ activeFilters }, { payload }) => {
             activeFilters['category paginate'].totalItems = payload;
+        },
+        changeSelectedSortingCategory: (state, action) => {
+            state.selectedSortingCategory = action.payload;
+            state.activeFilters['category paginate'].pageNumber = 1;
         }
     }
 });
@@ -133,6 +138,7 @@ export const {
     addFilter,
     clearFilters,
     setPagination,
-    setTotalItems
+    setTotalItems,
+    changeSelectedSortingCategory
 } = filtersSlice.actions;
 export default filtersSlice.reducer;

@@ -1,7 +1,6 @@
 //* components
 import Image from 'next/image';
 import { Button, Input } from '@nextui-org/react';
-import Subtitle from '@/components/ui/texts/Subtitle';
 
 
 
@@ -11,7 +10,7 @@ const Subscribe = () => {
             <div className='absolute left-[3%] top-0 h-full w-2/4'>
                 <Image
                     fill
-                    src='/subscribe-bg.webp'
+                    src='/images/other/subscribe-bg.webp'
                     alt='Subscribe to our newsletter!'
                     className='object-cover grayscale opacity-25'
                 />

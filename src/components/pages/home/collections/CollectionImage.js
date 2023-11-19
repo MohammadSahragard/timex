@@ -12,10 +12,10 @@ const CollectionImage = () => {
     const selectedCollection = useSelector(state => state.options.selectedCollection);
 
     const srcBanner = {
-        UFC: '/ufc-collection-banner.jpg',
-        'Easy Reader': '/easyReader-collection-banner.jpg',
-        'Expedition North': '/expeditionNorth-collection-banner.png',
-        Waterbury: '/waterbury-collection-banner.jpg'
+        UFC: '/images/collections/ufc-collection-banner.jpg',
+        'Easy Reader': '/images/collections/easyReader-collection-banner.jpg',
+        'Expedition North': '/images/collections/expeditionNorth-collection-banner.png',
+        Waterbury: '/images/collections/waterbury-collection-banner.jpg'
     };
 
 

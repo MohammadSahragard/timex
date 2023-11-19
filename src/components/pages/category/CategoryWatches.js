@@ -21,7 +21,7 @@ const CategoryWatches = ({ category }) => {
 
     const dispatch = useDispatch();
     //? -------------------------- query dependencies -------------------- */
-    const sortBy = useSelector(state => state.options.selectedSortingCategory);
+    const sortBy = useSelector(state => state.filtersBar.selectedSortingCategory);
     const { pageNumber, perPage } = useSelector(state => state.filtersBar.activeFilters['category paginate']);
 
 

@@ -7,7 +7,6 @@ import {
 
 // public
 import { createSlice } from '@reduxjs/toolkit';
-import { QueryClient } from 'react-query';
 
 
 
@@ -17,8 +16,7 @@ const initialState = {
         currentWatch: 0,
         category: 'men'
     },
-    selectedCollection: 'UFC',
-    selectedSortingCategory: 'popular'
+    selectedCollection: 'UFC'
 };
 
 
@@ -57,9 +55,6 @@ const optionsSlice = createSlice({
         },
         changeSelectedCollection: (state, action) => {
             state.selectedCollection = action.payload;
-        },
-        changeSelectedSortingCategory: (state, action) => {
-            state.selectedSortingCategory = action.payload;
         }
     },
 });
@@ -68,7 +63,6 @@ const optionsSlice = createSlice({
 export const {
     changeQuery,
     changeHighlightWatch,
-    changeSelectedCollection,
-    changeSelectedSortingCategory
+    changeSelectedCollection
 } = optionsSlice.actions;
 export default optionsSlice.reducer;

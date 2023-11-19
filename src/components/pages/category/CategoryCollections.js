@@ -8,9 +8,9 @@ import SectionTitle from "@/components/ui/texts/SectionTitle";
 const CategoryCollections = () => {
 
     const collections = [
-        { src: '/collection-banner.png', title: 'fairfield', href: '/' },
-        { src: '/easyReader-collection-banner.jpg', title: 'easy reader', href: '/' },
-        { src: '/sale-category.webp', title: 'waterbury', href: '/' },
+        { src: '/images/collections/expeditionNorth-collection.webp', title: 'fairfield', href: '/collection/easy-reader' },
+        { src: '/images/collections/ufc-collection.webp', title: 'ufc', href: '/collection/ufc' },
+        { src: '/images/collections/waterbury-collection.webp', title: 'waterbury', href: '/collection/waterbury' },
     ];
 
 

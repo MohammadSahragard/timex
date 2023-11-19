@@ -8,9 +8,9 @@ import SectionTitle from '@/components/ui/texts/SectionTitle';
 const Categories = () => {
 
     const categories = [
-        { src: '/expedition-2.webp', title: 'for men', href: '/category/men' },
-        { src: '/women-category.webp', title: 'for women', href: '/category/women' },
-        { src: '/sale-category.webp', title: 'watches on sale', href: '/category/sale' },
+        { src: '/images/collections/men-category.webp', title: 'for men', href: '/category/men' },
+        { src: '/images/collections/women-category.webp', title: 'for women', href: '/category/women' },
+        { src: '/images/collections/sale-category.webp', title: 'watches on sale', href: '/category/sale' },
     ];
 
 
@@ -26,7 +26,7 @@ const Categories = () => {
                 <div className='grid grid-cols-[repeat(auto-fit,_minmax(250px,1fr))] gap-5'>
                     {
                         categories.map((category, index) =>
-                            <div key={(index+1) * 34} data-aos='fade-left' data-aos-delay={index * 200}>
+                            <div key={(index + 1) * 34} data-aos='fade-left' data-aos-delay={index * 200}>
                                 <CollectionCard
                                     imageSrc={category.src}
                                     titleName={category.title}

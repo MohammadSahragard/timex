@@ -12,7 +12,7 @@ const Weekender = ({ CTA }) => {
     return (
         <div className='relative bg-[#F7F4EF] flex items-center justify-center sm:justify-end'>
             <Image
-                src='/weekender.png'
+                src='/images/other/weekender.png'
                 width={300}
                 height={300}
                 alt='Weekender banner image'

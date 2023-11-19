@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 //* components
 import { Image } from '@nextui-org/react';
-import Tooltip from '@/components/ui/texts/Tooltip';
 
 
 
@@ -25,18 +24,19 @@ const ProductHeroSlider = ({ data, selectedImage, isColors }) => {
         >
             {
                 data?.map(image =>
-                    <SwiperSlide
-                        key={imagePath(image)}
-                        className={`!h-20 bg-white !w-full grid place-items-center border-2 transition-all
+                    <SwiperSlide key={imagePath(image)}>
+                        <section
+                            className={`!h-20 bg-white !w-full grid place-items-center border-2 transition-all cursor-pointer
                                     ${selectedImagePath === imagePath(image) ? 'border-primary' : 'border-white'}
-                        `}
-                        onClick={() => setSelectedImagePath(imagePath(image))}
-                    >
-                        <Image
-                            src={imagePath(image)}
-                            alt='Other image of product'
-                            className='h-16'
-                        />
+                            `}
+                            onClick={() => setSelectedImagePath(imagePath(image))}
+                        >
+                            <Image
+                                src={imagePath(image)}
+                                alt='Other image of product'
+                                className='h-16'
+                            />
+                        </section>
                     </SwiperSlide>
                 )
             }
