@@ -5,10 +5,10 @@ import { useQuery } from "react-query";
 
 //* components
 import BasketCard from "../cards/BasketCard";
+import Loading from "../no-result/Loading";
 
 //* api
-import { getBasketProducts } from "@/app/libs/basket/getBasketProducts";
-import Loading from "../no-result/Loading";
+import { getBasketProducts } from "@/libs/basket/getBasketProducts";
 
 
 

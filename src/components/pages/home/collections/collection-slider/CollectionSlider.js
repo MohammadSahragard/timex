@@ -5,7 +5,7 @@ import SectionTitle from "@/components/ui/texts/SectionTitle";
 
 
 //* get all watches
-import { getWatches } from "@/app/libs/all-watches/getWatches";
+import { getWatches } from "@/libs/all-watches/getWatches";
 
 
 

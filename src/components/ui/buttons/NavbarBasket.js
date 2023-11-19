@@ -11,7 +11,7 @@ import { Badge } from '@nextui-org/react';
 import { modalToggler, calculateBasket } from '@/helper/function';
 
 //* api
-import { getBasketProducts } from "@/app/libs/basket/getBasketProducts";
+import { getBasketProducts } from "@/libs/basket/getBasketProducts";
 
 
 

@@ -6,7 +6,7 @@ import SliderControlBar from "./SliderControlBar";
 
 
 //* get data (4 watches with the highest price. (4 men and 4 women))
-import { getHighlightsWatches } from "@/app/libs/highlights-watches/getHighlightsWatches";
+import { getHighlightsWatches } from "@/libs/highlights-watches/getHighlightsWatches";
 
 
 

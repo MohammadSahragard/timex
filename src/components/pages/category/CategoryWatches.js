@@ -9,8 +9,8 @@ import SectionTitle from "@/components/ui/texts/SectionTitle";
 import Loading from "@/components/shared/no-result/Loading";
 
 //* api
-import { getCategoryWatches } from "@/app/libs/category-watches/getCategoryWatches";
-import { getCategoryLengthItems } from "@/app/libs/category-watches/getCategoryLengthItems";
+import { getCategoryWatches } from "@/libs/category-watches/getCategoryWatches";
+import { getCategoryLengthItems } from "@/libs/category-watches/getCategoryLengthItems";
 
 //* actions
 import { setTotalItems } from "@/redux/features/filters/filtersSlice";

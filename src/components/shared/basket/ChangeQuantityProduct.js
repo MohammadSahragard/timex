@@ -9,7 +9,7 @@ import { Button } from "@nextui-org/react";
 import ProductName from "@/components/ui/texts/ProductName";
 
 //* api
-import { increaseQuantity, decreaseQuantity } from "@/app/libs/basket/productQuantity";
+import { increaseQuantity, decreaseQuantity } from "@/libs/basket/productQuantity";
 
 
 const ChangeQuantityProducts = ({ id, quantity }) => {

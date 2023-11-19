@@ -9,7 +9,9 @@ import Price from "@/components/ui/texts/Price";
 import Title from "@/components/ui/texts/Title";
 
 //* api
-import { getBasketProducts } from "@/app/libs/basket/getBasketProducts";
+import { getBasketProducts } from "@/libs/basket/getBasketProducts";
+
+//* helper
 import { calculateBasket } from "@/helper/function";
 
 

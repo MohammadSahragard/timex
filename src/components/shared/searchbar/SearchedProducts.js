@@ -10,7 +10,7 @@ import NoResult from "@/components/shared/no-result/NoResult";
 import Loading from "../no-result/Loading";
 
 //* api
-import { getWatches } from "@/app/libs/all-watches/getWatches";
+import { getWatches } from "@/libs/all-watches/getWatches";
 
 
 function SearchedProducts() {

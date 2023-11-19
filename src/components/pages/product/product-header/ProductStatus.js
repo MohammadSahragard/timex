@@ -8,7 +8,7 @@ import Rate from "@/components/ui/value/Rate";
 import { Divider } from "@nextui-org/react";
 
 //* api
-import { getWatchInfo } from "@/app/libs/watch/getWatchInfo";
+import { getWatchInfo } from "@/libs/watch/getWatchInfo";
 
 
 

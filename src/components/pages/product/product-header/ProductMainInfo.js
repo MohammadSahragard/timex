@@ -9,7 +9,7 @@ import LastPrice from "@/components/ui/texts/LastPrice";
 import AddProduct from "@/components/ui/buttons/AddProduct";
 
 //* api
-import { getWatchInfo } from "@/app/libs/watch/getWatchInfo";
+import { getWatchInfo } from "@/libs/watch/getWatchInfo";
 
 
 

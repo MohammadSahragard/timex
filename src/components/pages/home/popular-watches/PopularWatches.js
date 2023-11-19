@@ -5,7 +5,7 @@ import SectionTitle from "@/components/ui/texts/SectionTitle";
 
 
 //* get watches (trending collection watches)
-import { getTrendingWatches } from "@/app/libs/trending-watches/getTrendingWatches";
+import { getTrendingWatches } from "@/libs/trending-watches/getTrendingWatches";
 
 
 const PopularWatches = async () => {

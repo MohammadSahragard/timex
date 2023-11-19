@@ -11,9 +11,9 @@ import { Button } from "@nextui-org/react";
 import { isInCart } from "@/helper/function";
 
 //* api
-import { getBasketProducts } from "@/app/libs/basket/getBasketProducts";
-import { addProductToBasket } from "@/app/libs/basket/addProductToBasket";
-import { removeProductFromBasket } from "@/app/libs/basket/removeProductFromBasket";
+import { getBasketProducts } from "@/libs/basket/getBasketProducts";
+import { addProductToBasket } from "@/libs/basket/addProductToBasket";
+import { removeProductFromBasket } from "@/libs/basket/removeProductFromBasket";
 
 
 const AddProduct = ({ watchData }) => {

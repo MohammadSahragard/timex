@@ -6,11 +6,11 @@ import { useQuery } from "react-query";
 
 //* components
 import SectionTitle from "@/components/ui/texts/SectionTitle";
-
-//* api
-import { getWatchInfo } from "@/app/libs/watch/getWatchInfo";
 import ProductHeroSlider from "./ProductHeroSlider";
 import ProductHeroImage from "./ProductHeroImage";
+
+//* api
+import { getWatchInfo } from "@/libs/watch/getWatchInfo";
 
 
 

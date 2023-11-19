@@ -7,7 +7,7 @@ import { useMutation, useQueryClient } from "react-query";
 import { Button } from "@nextui-org/react";
 
 //* api
-import { removeProductFromBasket } from "@/app/libs/basket/removeProductFromBasket";
+import { removeProductFromBasket } from "@/libs/basket/removeProductFromBasket";
 
 
 
