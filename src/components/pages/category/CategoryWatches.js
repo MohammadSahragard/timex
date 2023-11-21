@@ -1,5 +1,6 @@
 'use client';;
 // public
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useQuery } from "react-query";
 
@@ -36,7 +37,12 @@ const CategoryWatches = ({ category }) => {
         data: getLength,
         isLoading: lengthLoading
     } = useQuery('watchesLength', () => getCategoryLengthItems(category));
-    !lengthLoading && dispatch(setTotalItems(getLength?.length ?? 15));
+
+    useEffect(() => {
+        !lengthLoading && dispatch(setTotalItems(getLength?.length ?? 15));
+        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
 
 

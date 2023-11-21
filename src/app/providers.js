@@ -15,6 +15,9 @@ import 'aos/dist/aos.css';
 import { QueryClient, QueryClientProvider } from "react-query";
 const queryClient = new QueryClient();
 
+// components
+import { NavigationEvents } from "@/components/shared/navigation-bar/navigation-events";
+
 
 const Providers = ({ children }) => {
 
@@ -24,6 +27,8 @@ const Providers = ({ children }) => {
     return (
         <Provider store={store}>
             <QueryClientProvider client={queryClient}>
+                <NavigationEvents />
+
                 {children}
             </QueryClientProvider>
         </Provider>

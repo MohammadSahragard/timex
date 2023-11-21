@@ -1,5 +1,6 @@
 'use server';
 
+import RelatedWatches from "@/components/pages/product/RelatedWatches";
 //* components
 import ProductHeader from "@/components/pages/product/product-header/ProductHeader";
 import ProductHero from "@/components/pages/product/product-hero/ProductHero";
@@ -32,6 +33,7 @@ const Product = async ({ params }) => {
                 <ProductHero watchInfo={watchInfo} />
                 <ProductMainContent watchInfo={watchInfo} />
             </div>
+            <RelatedWatches watchInfo={watchInfo} />
         </div>
     );
 };
