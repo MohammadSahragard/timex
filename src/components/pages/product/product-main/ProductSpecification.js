@@ -7,7 +7,7 @@ import SectionTitle from "@/components/ui/texts/SectionTitle";
 
 const ProductSpecification = ({ watchInfo }) => {
     return (
-        <div className='flex flex-col gap-5 relative lg:pr-[calc(150px+3%)]' id="specification">
+        <div className='flex flex-col gap-5 relative lg:pr-[300px]' id="specification">
             <Title>specification</Title>
             <div>
                 {
@@ -25,7 +25,7 @@ const ProductSpecification = ({ watchInfo }) => {
             </div>
 
 
-            <SectionTitle position='-right-[8.5%] top-[10%]'>{`watch's specification`}</SectionTitle>
+            <SectionTitle position='-right-[8.5%] top-[50px]'>{`watch's specification`}</SectionTitle>
         </div>
     );
 };

@@ -1,7 +1,7 @@
 //* components
-import ProductName from "@/components/ui/texts/ProductName";
-import Subtitle from "@/components/ui/texts/Subtitle";
-import { Image } from "@nextui-org/react";
+import ProductName from '@/components/ui/texts/ProductName';
+import Subtitle from '@/components/ui/texts/Subtitle';
+import { Image } from '@nextui-org/react';
 
 
 
@@ -20,8 +20,11 @@ const ProductFeatures = ({ watchInfo }) => {
 
 
     return (
-        <div className='grid grid-cols-2 lg:pr-[calc(150px+3%)] auto-rows-[300px]'>
-            <div className='bg-[#ECEBF0] overflow-hidden relative'>
+        <div className='grid grid-cols-2 lg:pr-[300px] auto-rows-[300px]'>
+            <div
+                className='bg-[#ECEBF0] overflow-hidden relative'
+                data-aos='zoom-in'
+            >
                 <section className='absolute left-0 top-2/4 -translate-x-1/4 -translate-y-2/4'>
                     <Image
                         src={mainImage}
@@ -30,7 +33,10 @@ const ProductFeatures = ({ watchInfo }) => {
                     />
                 </section>
             </div>
-            <div className='grid place-items-center'>
+            <div
+                className='grid place-items-center'
+                data-aos='fade-left'
+            >
                 <section className='flex flex-col'>
                     <section className='flex flex-col sm:flex-row'>
                         <ProductName>Case Material</ProductName>
@@ -42,13 +48,19 @@ const ProductFeatures = ({ watchInfo }) => {
             </div>
 
 
-            <div className='grid place-items-center'>
+            <div
+                className='grid place-items-center'
+                data-aos='fade-right'
+            >
                 <section className='flex flex-col'>
                     <ProductName>Case Size / Diameter</ProductName>
                     <Subtitle>{caseSize} / {caseDiameter}</Subtitle>
                 </section>
             </div>
-            <div className='bg-[#ECEBF0] overflow-hidden relative'>
+            <div
+                className='bg-[#ECEBF0] overflow-hidden relative'
+                data-aos='zoom-in'
+            >
                 <section className='absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4'>
                     <Image
                         src={mainImage}
@@ -59,7 +71,10 @@ const ProductFeatures = ({ watchInfo }) => {
             </div>
 
 
-            <div className='bg-[#ECEBF0] overflow-hidden relative'>
+            <div
+                className='bg-[#ECEBF0] overflow-hidden relative'
+                data-aos='zoom-in'
+            >
                 <section className='absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4'>
                     <Image
                         src={bandImage}
@@ -68,7 +83,10 @@ const ProductFeatures = ({ watchInfo }) => {
                     />
                 </section>
             </div>
-            <div className='grid place-items-center'>
+            <div
+                className='grid place-items-center'
+                data-aos='fade-left'
+            >
                 <section className='flex flex-col'>
                     <ProductName>Band Material</ProductName>
                     <Subtitle>{bandMaterial}</Subtitle>
