@@ -4,11 +4,11 @@ import ProductStatus from "./ProductStatus";
 
 
 
-const ProductHeader = ({ id }) => {
+const ProductHeader = ({ watchInfo }) => {
     return (
-        <div>
-            <ProductMainInfo id={id} />
-            <ProductStatus id={id} />
+        <div data-aos='fade'>
+            <ProductMainInfo watchInfo={watchInfo} />
+            <ProductStatus watchInfo={watchInfo} />
         </div>
     );
 };

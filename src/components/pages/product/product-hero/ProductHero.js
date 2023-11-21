@@ -2,25 +2,20 @@
 
 // public
 import { useState, useEffect } from "react";
-import { useQuery } from "react-query";
 
 //* components
 import SectionTitle from "@/components/ui/texts/SectionTitle";
 import ProductHeroSlider from "./ProductHeroSlider";
 import ProductHeroImage from "./ProductHeroImage";
 
-//* api
-import { getWatchInfo } from "@/libs/watch/getWatchInfo";
 
 
-
-const ProductHero = ({ id }) => {
+const ProductHero = ({ watchInfo }) => {
 
     // states
     const [selectedImagePath, setSelectedImagePath] = useState('');
 
     // data
-    const { data: watchInfo } = useQuery('watchInfo', () => getWatchInfo(id));
     const otherImage = watchInfo?.['other images'];
 
 

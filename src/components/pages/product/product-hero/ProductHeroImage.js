@@ -6,7 +6,7 @@ import { Image } from "@nextui-org/react";
 const ProductHeroImage = ({ selectedImage }) => {
     return (
         <div
-            className='bg-white h-4/5 aspect-square rounded-full grid place-items-center'
+            className='sm:bg-white h-4/5 aspect-square rounded-full grid place-items-center'
             data-aos='zoom-in'
             data-aos-delay={200}
         >

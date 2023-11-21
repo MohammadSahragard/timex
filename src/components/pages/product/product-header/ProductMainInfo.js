@@ -1,21 +1,11 @@
-'use client';
-
-// public
-import { useQuery } from "react-query";
-
 //* components
 import Price from "@/components/ui/texts/Price";
 import LastPrice from "@/components/ui/texts/LastPrice";
 import AddProduct from "@/components/ui/buttons/AddProduct";
 
-//* api
-import { getWatchInfo } from "@/libs/watch/getWatchInfo";
 
 
-
-const ProductMainInfo = ({ id }) => {
-
-    const { data: watchInfo } = useQuery('watchInfo', () => getWatchInfo(id));
+const ProductMainInfo = ({ watchInfo }) => {
 
     const productName = watchInfo?.name?.split(' ') ?? '';
 

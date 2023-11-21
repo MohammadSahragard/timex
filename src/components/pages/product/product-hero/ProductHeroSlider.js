@@ -19,7 +19,7 @@ const ProductHeroSlider = ({ data, selectedImage, isColors }) => {
         <Swiper
             direction='vertical'
             slidesPerView={3}
-            className='w-[120px] h-[280px] p-0 overflow-hidden'
+            className='w-[90px] sm:w-[120px] h-[280px] p-0 overflow-hidden'
             spaceBetween={20}
         >
             {
