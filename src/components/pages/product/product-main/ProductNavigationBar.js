@@ -1,8 +1,7 @@
 //* components
 import AddProduct from "@/components/ui/buttons/AddProduct";
-import NavLink from "@/components/ui/links/NavLink";
+import InternalLink from "@/components/ui/links/InternalLink";
 import PageLink from "@/components/ui/links/PageLink";
-import LastPrice from "@/components/ui/texts/LastPrice";
 import Price from "@/components/ui/texts/Price";
 import Subtitle from "@/components/ui/texts/Subtitle";
 import Rate from "@/components/ui/value/Rate";
@@ -14,9 +13,9 @@ const ProductNavigationBar = ({ watchInfo }) => {
     return (
         <div className='absolute top-0 bottom-0 right-0 w-[150px] pb-16 hidden lg:block' data-aos='fade-up'>
             <div className='sticky top-[84px] flex flex-col gap-2'>
-                <NavLink href='#description'>Description</NavLink>
-                <NavLink href='#specification'>Specification</NavLink>
-                <NavLink href='#reviews'>Reviews</NavLink>
+                <InternalLink href='description'>Description</InternalLink>
+                <InternalLink href='specification'>Specification</InternalLink>
+                <InternalLink href='reviews'>Reviews</InternalLink>
 
                 <Divider className='w-10 my-3' />
 

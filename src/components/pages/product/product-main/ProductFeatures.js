@@ -20,7 +20,7 @@ const ProductFeatures = ({ watchInfo }) => {
 
 
     return (
-        <div className='grid grid-cols-2 lg:pr-[300px] auto-rows-[300px]'>
+        <div className='grid grid-cols-2 auto-rows-[300px]'>
             <div
                 className='bg-[#ECEBF0] overflow-hidden relative'
                 data-aos='zoom-in'

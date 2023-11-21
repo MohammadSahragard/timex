@@ -1,6 +1,6 @@
 'use client';
 
-
+// 
 const navbarBg = () => {
     const navbar = document.querySelector('.main-navbar');
 
