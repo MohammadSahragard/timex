@@ -15,12 +15,6 @@ import Basket from '@/components/shared/modals/Basket';
 // font
 const roboto = Roboto({ subsets: ['latin'], weight: ['100', '300', '400', '500', '700', '900'] });
 
-// metadata
-export const metadata = {
-  title: 'Timex',
-  description: 'Watch store',
-  image: '/public/fav-icon.svg'
-};
 
 export default function RootLayout({ children }) {
   return (

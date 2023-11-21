@@ -6,7 +6,7 @@ import MenuToggler from '@/components/ui/buttons/MenuToggler';
 import SearchbarToggler from '@/components/ui/buttons/SearchbarToggler';
 
 //* helper
-import { navbarBg } from '@/helper/scroll';
+import { Divider } from '@nextui-org/react';
 
 
 
@@ -33,6 +33,8 @@ const MainNavbar = () => {
 
                 <div className='flex items-center gap-2'>
                     <SearchbarToggler />
+
+                    <Divider orientation='vertical' className='h-5' />
 
                     <NextUiButton
                         isIconOnly

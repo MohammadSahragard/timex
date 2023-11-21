@@ -6,17 +6,17 @@ import ProductHeader from "@/components/pages/product/product-header/ProductHead
 import ProductHero from "@/components/pages/product/product-hero/ProductHero";
 import ProductMainContent from "@/components/pages/product/product-main/ProductMainContent";
 
+//* api
+import { getWatchInfo } from "@/libs/watch/getWatchInfo";
+
 
 
 //* metadata
 export const generateMetadata = async ({ params }) => {
     return {
-        title: `Timex | ${params.name}`,
+        title: params.name,
     };
 };
-
-//* api
-import { getWatchInfo } from "@/libs/watch/getWatchInfo";
 
 
 

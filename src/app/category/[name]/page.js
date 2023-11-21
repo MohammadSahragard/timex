@@ -5,6 +5,16 @@ import CategoryPagination from "@/components/pages/category/CategoryPagination";
 import CategoryWatches from "@/components/pages/category/CategoryWatches";
 
 
+
+//* metadata
+export const generateMetadata = async ({ params }) => {
+    return {
+        title: `Timex - ${params.name} Category`,
+    };
+};
+
+
+
 const Category = ({ params }) => {
 
     const category = params.name;

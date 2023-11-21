@@ -26,6 +26,7 @@ const RemoveProductButton = ({ id }) => {
         <Button
             isIconOnly
             className='bg-transparent text-foreground text-2xl'
+            disabled={removeProduct.isLoading ? true : false}
             onClick={() => removeProduct.mutate(id)}
         >
             <i className={removeProduct.isLoading ? 'fad fa-spinner-third fa-spin' : 'fat fa-xmark-large'}></i>

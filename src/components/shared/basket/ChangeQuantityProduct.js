@@ -34,6 +34,7 @@ const ChangeQuantityProducts = ({ id, quantity }) => {
                 radius='full'
                 color='primary'
                 variant='ghost'
+                disabled={decrease.isLoading ? true : false}
                 startContent={
                     decrease.isLoading ?
                         <i className="fad fa-spinner-third fa-spin"></i> :
@@ -50,6 +51,7 @@ const ChangeQuantityProducts = ({ id, quantity }) => {
                 radius='full'
                 color='primary'
                 variant='ghost'
+                disabled={increase.isLoading ? true : false}
                 startContent={
                     increase.isLoading ?
                         <i className="fad fa-spinner-third fa-spin"></i> :
