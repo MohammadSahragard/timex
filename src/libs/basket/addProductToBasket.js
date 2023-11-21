@@ -1,5 +1,5 @@
 export const addProductToBasket = async (watch) => {
-    await fetch('https://watches-db.vercel.app/cart', {
+    await fetch('https://timex-db.vercel.app/cart', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
