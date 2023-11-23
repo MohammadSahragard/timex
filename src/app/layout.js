@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
           <SearchBar />
           <Basket />
 
-          <main className='min-h-screen'>
+          <main className='min-h-screen overflow-x-clip'>
             {children}
           </main>
 

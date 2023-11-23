@@ -29,7 +29,7 @@ const Archive = ({ CTA }) => {
                 />
             </div>
 
-            <div className='w-2/4 relative flex flex-col gap-2 items-center text-center sm:items-end sm:text-start'>
+            <div className='sm:w-2/4 relative flex flex-col gap-2 items-center text-center sm:items-end sm:text-start'>
                 <Title>Timex Archive</Title>
                 <Subtitle>Discover our <span className='font-bold'>new capsule</span> collection.</Subtitle>
                 {

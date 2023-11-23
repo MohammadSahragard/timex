@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className='min-h-screen overflow-hidden'>
+    <div className='min-h-screen'>
       <HighlightWatches />
       <Categories />
       <Collection />

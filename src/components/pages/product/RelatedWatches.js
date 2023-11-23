@@ -17,7 +17,7 @@ const RelatedWatches = async ({ watchInfo }) => {
 
     return (
         <div className='related-watches relative bg-[#ECEBF0]'>
-            <div className='max-w-[1536px] h-screen mx-auto flex flex-col justify-center gap-10 p-[64px_3%] lg:p-[0_150px]'>
+            <div className='max-w-[1536px] h-screen mx-auto flex flex-col justify-center gap-20 p-[64px_3%] lg:p-[0_150px]'>
                 <SectionsHeader heading="Related Watches" link={{ name: 'shop all', href: `/collection/${watchInfo?.collection ?? 'UFC'}` }} />
                 <Slider data={relatedWatches.length ? relatedWatches : WaterburyWatches} />
             </div>

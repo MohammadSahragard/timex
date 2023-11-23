@@ -19,7 +19,7 @@ const Weekender = ({ CTA }) => {
                 className='hidden lg:block absolute left-[3%] h-full w-auto'
             />
 
-            <div className='relative w-2/4 flex flex-col gap-2 items-center text-center md:items-start backdrop-blur-md'>
+            <div className='relative sm:w-2/4 flex flex-col gap-2 items-center text-center md:items-start backdrop-blur-md'>
                 <Title>Weekender</Title>
                 <Subtitle>Switch it up with <span className='font-bold'>interchangeable</span> straps.</Subtitle>
                 {
