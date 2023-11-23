@@ -1,7 +1,7 @@
 'use client';
 
 //* animations
-import { fadeInTransition } from "@/animations/animate";
+import { fadeInTransition, fadeOutTransition } from "@/animations/animate";
 
 
 
@@ -24,8 +24,8 @@ const calculateBasket = items => {
 };
 
 
-//! modal toggler function
-const modalToggler = (modalClass, otherClass) => {
+//! modal toggler functions
+const showModal = (modalClass, otherClass) => {
     const app = document.querySelector('.app');
     const modal = document.querySelector(modalClass);
 
@@ -35,6 +35,19 @@ const modalToggler = (modalClass, otherClass) => {
     }, 1000);
 
     otherClass?.map(className => fadeInTransition(className.target, className?.delay ?? 1));
+};
+
+const closeModal = (closerClass, modalClass, otherClass) => {
+    const app = document.querySelector('.app');
+    const modal = document.querySelector(modalClass);
+
+    setTimeout(() => {
+        modal.style.transform = 'translateX(100%)';
+        app.classList.remove('popup-shown');
+    }, 500);
+
+    fadeOutTransition(closerClass);
+    otherClass?.map(className => fadeOutTransition(className));
 };
 
 
@@ -48,6 +61,7 @@ export {
     getPagesCount,
     isInCart,
     calculateBasket,
-    modalToggler,
+    showModal,
+    closeModal,
     isActiveFilter
 };

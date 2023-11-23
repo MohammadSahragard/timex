@@ -11,7 +11,7 @@ import SectionTitle from "@/components/ui/texts/SectionTitle";
 
 const Archive = ({ CTA }) => {
     return (
-        <div className='relative bg-[#C2BFB3] flex justify-start items-center pl-[3%]'>
+        <div className='relative bg-[#C2BFB3] flex items-center justify-center sm:justify-start'>
 
             <Image
                 src='/images/other/mountain.jpg'
@@ -20,7 +20,7 @@ const Archive = ({ CTA }) => {
                 className='object-cover mix-blend-soft-light'
             />
 
-            <div className='absolute top-0 bottom-0 right-0 w-[300px]'>
+            <div className='absolute top-0 bottom-0 right-0 w-[300px] hidden sm:block'>
                 <Image
                     src='/images/other/archive.webp'
                     fill
@@ -29,7 +29,7 @@ const Archive = ({ CTA }) => {
                 />
             </div>
 
-            <div className='w-2/4 relative flex flex-col gap-2 items-start backdrop-blur-md sm:items-end sm:backdrop-blur-0'>
+            <div className='w-2/4 relative flex flex-col gap-2 items-center text-center sm:items-end sm:text-start'>
                 <Title>Timex Archive</Title>
                 <Subtitle>Discover our <span className='font-bold'>new capsule</span> collection.</Subtitle>
                 {

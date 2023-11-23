@@ -17,9 +17,9 @@ const SearchbarInput = () => {
 
 
     return (
-        <div className='search-box h-10 sm:h-16 grid grid-cols-[auto_max-content] border-b-2'>
+        <div className='h-10 sm:h-16 grid grid-cols-[auto_max-content] border-b-2'>
             <input
-                className='bg-transparent border-none outline-none text-xl font-bold'
+                className='search-box bg-transparent border-none outline-none text-xl font-bold'
                 type='search'
                 value={query}
                 onChange={({ target }) => dispatch(changeQuery(target.value))}

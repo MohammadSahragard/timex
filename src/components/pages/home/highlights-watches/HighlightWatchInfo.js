@@ -25,12 +25,12 @@ const HighlightWatchInfo = ({ data }) => {
 
 
     return (
-        <div className='w-full h-max flex justify-center items-center sm:gap-[40%] sm:justify-center px-[3%]'>
+        <div className='w-full h-max flex justify-center items-center sm:gap-[60%] md:gap-[120%] sm:justify-center px-[3%]'>
             {/* left sidebar info  */}
             <div className='absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4
                             sm:relative sm:left-0 sm:translate-x-0 sm:translate-y-0'>
                 <div
-                    className='flex flex-col justify-end items-center gap-0 z-30 h-[500px] sm:gap-10 sm:h-[250px] sm:items-start'
+                    className='w-max flex flex-col justify-end items-center gap-0 z-30 h-[550px] sm:gap-10 sm:h-[250px] sm:items-start'
                     data-aos='fade'
                     data-aos-delay='900'
                 >

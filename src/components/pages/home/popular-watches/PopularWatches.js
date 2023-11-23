@@ -14,8 +14,8 @@ const PopularWatches = async () => {
 
 
     return (
-        <div className='popular-watches relative'>
-            <div className='max-w-[1536px] h-screen mx-auto flex flex-col justify-center gap-10 p-[64px_3%] lg:p-[0_150px] bg-[#ECEBF0]'>
+        <div className='popular-watches relative bg-[#ECEBF0]'>
+            <div className='max-w-[1536px] mx-auto h-screen flex flex-col justify-center gap-10 p-[64px_3%] lg:p-[0_150px]'>
                 <SectionsHeader heading="Popular Watches" link={{ name: 'shop all', href: '/collection/trending' }} />
                 <Slider data={watches} />
             </div>

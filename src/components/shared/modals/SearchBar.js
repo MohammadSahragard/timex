@@ -19,7 +19,7 @@ const SearchBar = () => {
                 </section>
 
                 <ModalCloserButton
-                    closerClass='searchbar_closer'
+                    closerClass='.searchbar_closer'
                     modalClass='.searchbar'
                     otherClass={[
                         '.searchbar_logo',
@@ -33,7 +33,7 @@ const SearchBar = () => {
                 <Menu onModal />
             </div>
 
-            <div className='searchbar_content px-[40px] lg:px-[150px] absolute inset-0 pt-16 grid grid-rows-[max-content_auto]'>
+            <div className='searchbar_content max-w-[1536px] mx-auto px-[40px] lg:px-[150px] absolute inset-0 pt-16 grid grid-rows-[max-content_auto]'>
                 <SearchbarInput />
                 <SearchedProducts />
             </div>

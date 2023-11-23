@@ -16,7 +16,8 @@ const initialState = {
         currentWatch: 0,
         category: 'men'
     },
-    selectedCollection: 'UFC'
+    selectedCollection: 'UFC',
+    isOpenModal: false
 };
 
 
@@ -55,6 +56,9 @@ const optionsSlice = createSlice({
         },
         changeSelectedCollection: (state, action) => {
             state.selectedCollection = action.payload;
+        },
+        setModalOpen: (state, { payload }) => {
+            state.isOpenModal = payload;
         }
     },
 });
@@ -63,6 +67,7 @@ const optionsSlice = createSlice({
 export const {
     changeQuery,
     changeHighlightWatch,
-    changeSelectedCollection
+    changeSelectedCollection,
+    setModalOpen
 } = optionsSlice.actions;
 export default optionsSlice.reducer;

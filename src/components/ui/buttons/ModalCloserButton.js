@@ -1,35 +1,33 @@
 'use client';
 
+// public
+import { useDispatch } from 'react-redux';
+
 //* components
 import { Button } from '@nextui-org/react';
-
-//* animations
-import { fadeOutTransition } from '@/animations/animate';
 import Tooltip from '../texts/Tooltip';
+
+//* helper
+import { closeModal } from '@/helper/function';
+
+//* actions
+import { setModalOpen } from '@/redux/features/options/optionsSlice';
 
 
 const ModalCloserButton = ({ closerClass, modalClass, otherClass }) => {
 
+    const dispatch = useDispatch();
     // ---- functions
-    const toggleModal = () => {
-        const app = document.querySelector('.app');
-        const modal = document.querySelector(modalClass);
+    const modalCloser = () => {
+        closeModal(closerClass, modalClass, otherClass);
 
-        setTimeout(() => {
-            modal.style.transform = 'translateX(100%)';
-            app.classList.remove('popup-shown');
-        }, 500);
-
-        fadeOutTransition(`.${closerClass}`);
-        otherClass?.map(className => fadeOutTransition(className));
+        dispatch(setModalOpen(false));
     };
 
     // close modal with keys
     if (typeof window !== 'undefined') {
         window.addEventListener('keydown', e => {
-            const app = document.querySelector('.app');
-
-            e.key === 'Escape' && toggleModal();
+            e.key === 'Escape' && modalCloser();
         });
     };
 
@@ -39,8 +37,8 @@ const ModalCloserButton = ({ closerClass, modalClass, otherClass }) => {
         <Tooltip content='Esc'>
             <Button
                 isIconOnly
-                className={`${closerClass} bg-transparent text-primary text-2xl`}
-                onClick={toggleModal}
+                className={`${closerClass.split('.')[1]} bg-transparent text-primary text-2xl`}
+                onClick={modalCloser}
             >
                 <i className='fal fa-xmark-large'></i>
             </Button>

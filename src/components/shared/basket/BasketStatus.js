@@ -27,7 +27,9 @@ const BasketStatus = () => {
             <section className='flex items-center gap-2'>
                 <Title>Total: </Title>
                 <Price value={totalPrice ?? 0} />
-                <small className='text-default text-2xl'>({totalItems ?? 0} items)</small>
+                <small className='text-default text-2xl'>
+                    ({totalItems ?? 0}<span className='hidden sm:inline'> items</span>)
+                </small>
             </section>
 
             <Button>Buy</Button>

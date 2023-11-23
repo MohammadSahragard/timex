@@ -22,11 +22,11 @@ const HighlightWatches = async () => {
                 <HighlightImage data={{ menWatches, womenWatches }} />
             </div>
 
-            <div className='h-max absolute left-0 right-0 top-2/4 -translate-y-2/4'>
+            <div className='max-w-[1536px] mx-auto h-max absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4'>
                 <HighlightWatchInfo data={{ menWatches, womenWatches }} />
             </div>
 
-            <div className='absolute bottom-5 right-0 left-0'>
+            <div className='max-w-[1536px] mx-auto absolute bottom-5 right-0 left-0'>
                 <SliderControlBar />
             </div>
 

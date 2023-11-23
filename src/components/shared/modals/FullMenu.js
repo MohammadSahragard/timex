@@ -75,7 +75,7 @@ const FullMenu = () => {
                 </section>
 
                 <ModalCloserButton
-                    closerClass='full-menu_closer'
+                    closerClass='.full-menu_closer'
                     modalClass='.full-menu'
                     otherClass={[
                         '.full-menu_logo',
@@ -89,7 +89,7 @@ const FullMenu = () => {
                 <SocialMediaLinks />
             </section>
 
-            <div className='full-menu_content h-full pt-16 pl-[150px] pr-[40px] pb-6 lg:pb-0 lg:pr-[150px] overflow-auto xl:overflow-hidden'>
+            <div className='full-menu_content max-w-[1536px] mx-auto h-full pt-16 pl-[150px] pr-[40px] pb-6 lg:pb-0 lg:pr-[150px] overflow-auto xl:overflow-hidden'>
                 <div className='grid grid-rows-[repeat(2,max-content)] gap-16 sm:grid-cols-[1fr_2fr]'>
                     <div className='main-section-menu relative'>
                         <nav className='w-max h-max flex flex-col items-start gap-2 text-xl'>

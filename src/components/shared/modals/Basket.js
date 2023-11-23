@@ -22,7 +22,7 @@ const Basket = async () => {
                 </section>
 
                 <ModalCloserButton
-                    closerClass='basket_closer'
+                    closerClass='.basket_closer'
                     modalClass='.basket'
                     otherClass={[
                         '.basket_logo',
@@ -38,7 +38,7 @@ const Basket = async () => {
             </div>
 
 
-            <div className='basket_content h-full w-full px-[3%] lg:px-[150px] grid grid-rows-[max-content_auto_max-content] py-16'>
+            <div className='basket_content max-w-[1536px] mx-auto h-full w-full px-[3%] lg:px-[150px] grid grid-rows-[max-content_auto_max-content] py-16'>
                 <div className='flex justify-between items-center'>
                     <Heading customSize='text-4xl' rowDirection>My Basket</Heading>
 

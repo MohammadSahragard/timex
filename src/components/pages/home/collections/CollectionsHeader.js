@@ -13,15 +13,18 @@ const CollectionsHeader = () => {
                 <SectionsHeader
                     heading='New Collections'
                     link={{
-                        name: 'discover all collections',
+                        name: <span>
+                            <span className='hidden sm:block'>discover all collections</span>
+                            <span className='sm:hidden'>show all</span>
+                        </span>,
                         href: '/collections'
                     }}
                 />
-    
+
                 <CollectionsButtons />
-    
+
                 <CollectionImage />
-    
+
                 <SectionTitle position='-right-[8.5%] top-1/4'>The Selected collection</SectionTitle>
             </div>
         </div>

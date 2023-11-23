@@ -28,7 +28,7 @@ const ProductHero = ({ watchInfo }) => {
     return (
         <div className='h-[400px] bg-[#ECEBF0] relative grid place-items-center' data-aos='fade'>
             {/* colors */}
-            <div className='absolute left-[3%] top-2/4 -translate-y-2/4'>
+            <div className='absolute left-[3%] top-2/4 -translate-y-2/4 z-20'>
                 <div
                     data-aos='fade-right'
                     data-aos-delay={200}
@@ -50,7 +50,7 @@ const ProductHero = ({ watchInfo }) => {
 
 
             {/* selected color */}
-            <small className='absolute bottom-5 left-2/4 -translate-x-2/4 space-x-1'>
+            <small className='absolute bottom-5 left-2/4 -translate-x-2/4 flex gap-1 flex-nowrap'>
                 <span>Color:</span>
                 <span className='font-medium'>
                     {

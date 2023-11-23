@@ -26,7 +26,7 @@ const ProductHeroSlider = ({ data, selectedImage, isColors }) => {
                 data?.map(image =>
                     <SwiperSlide key={imagePath(image)}>
                         <section
-                            className={`!h-20 bg-white !w-full grid place-items-center border-2 transition-all cursor-pointer
+                            className={`!h-20 bg-white/30 sm:bg-white !w-full grid place-items-center border-2 transition-all cursor-pointer
                                     ${selectedImagePath === imagePath(image) ? 'border-primary' : 'border-white'}
                             `}
                             onClick={() => setSelectedImagePath(imagePath(image))}
