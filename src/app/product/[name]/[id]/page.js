@@ -27,7 +27,7 @@ const Product = async ({ params }) => {
 
 
     return (
-        <div className='relative min-h-screen bg-white overflow-hidden'>
+        <div className='relative min-h-screen bg-white'>
             <div className='max-w-[1536px] mx-auto p-[100px_3%_0_3%] lg:p-[100px_150px_0_150px] space-y-10'>
                 <ProductHeader watchInfo={watchInfo} />
                 <ProductHero watchInfo={watchInfo} />
