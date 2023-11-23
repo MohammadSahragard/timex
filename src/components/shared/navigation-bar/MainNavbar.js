@@ -13,7 +13,7 @@ import { Divider } from '@nextui-org/react';
 const MainNavbar = () => {
     return (
         <header
-            className='main-navbar h-16 fixed inset-[0_0_auto_0] px-[3%] grid grid-cols-[calc(150px_-_3%)_max-content_auto] items-center z-20'
+            className='main-navbar h-16 fixed inset-[0_0_auto_0] px-[3%] grid grid-cols-[calc(150px_-_3%)_max-content_auto] gap-5 items-center z-20'
             data-aos='fade-down'
         >
 
