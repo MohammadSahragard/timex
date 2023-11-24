@@ -34,7 +34,7 @@ const Footer = () => {
             <div className='h-10 flex justify-center items-center gap-2 border-t border-gray-500/20 text-default'>
                 <span>Developed by</span>
                 <i className='fab fa-github'></i>
-                <QuickLink href='github.com/MohammadSahragard'>Mohammad Sahragard</QuickLink>
+                <QuickLink href='https://github.com/MohammadSahragard'>Mohammad Sahragard</QuickLink>
             </div>
 
             <SectionTitle position='bottom-[104px] right-[3%]'>Timex is thanking for your time</SectionTitle>
