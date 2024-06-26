@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Timex
+Access my site at [timex-store.vercel.app](https://timex-store.vercel.app)
 
-## Getting Started
+### About the app
+The Timex is a store of watches for man, woman, and kids. In this personal project for my resume, I faced some UI challenges. I took the UI of this project from demo images of a project on Behance, which were in desktop size. So, I had to design the smaller sizes myself and hopefully, they have turned out well.
+- UI address: [Timex - Watch Shop](https://www.behance.net/gallery/61163831/Timex-Watch-Shop)
+- UI designer: [Matt Wojtaś](https://www.behance.net/gallery/61163831/Timex-Watch-Shop)
 
-First, run the development server:
+### Technologies used
+- Next js
+- Next ui
+- Redux toolkit
+- React query
+- Gsap
+- Swiper
+- Other: AOS, React-scroll
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Screen shots
+**Home page**
+![image](https://github.com/MohammadSahragard/timex/assets/77649975/18994c14-040f-4a64-a59d-b51c11121df5)
+**Category page**
+![image](https://github.com/MohammadSahragard/timex/assets/77649975/04ce4c95-96ef-49c0-a19c-1e04b6b6f544)
+**Product page**
+![image](https://github.com/MohammadSahragard/timex/assets/77649975/f94ff50b-57a8-463a-8480-2f14e762ea16)
+**Basket page**
+![image](https://github.com/MohammadSahragard/timex/assets/77649975/536ae1db-a3aa-4612-af3f-ac9ada165b1f)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
