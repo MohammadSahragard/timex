@@ -5,7 +5,7 @@ Access my site at [timex-store.vercel.app](https://timex-store.vercel.app)
 
 ---
 ### About the app
-The Timex is a store of watches for man, woman, and kids. In this personal project for my resume, I faced some UI challenges. I took the UI of this project from demo images of a project on Behance, which were in desktop size. So, I had to design the smaller sizes myself and hopefully, they have turned out well.
+The Timex is a store of watches for men, women, and kids. In this personal project for my resume, I faced some UI challenges. I took the UI of this project from demo images of a project on Behance, which were in desktop size. So, I had to design the smaller sizes myself and hopefully, they have turned out well.
 - UI address: [Timex - Watch Shop](https://www.behance.net/gallery/61163831/Timex-Watch-Shop)
 - UI designer: [Matt Wojtaś](https://www.behance.net/gallery/61163831/Timex-Watch-Shop)
 
