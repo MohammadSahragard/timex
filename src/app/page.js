@@ -5,14 +5,6 @@ import HighlightWatches from "@/components/pages/home/highlights-watches/Highlig
 import PopularWatches from "@/components/pages/home/popular-watches/PopularWatches";
 import WeekenderArchive from "@/components/pages/home/weekender-archive/WeekenderArchive";
 
-
-// metadata
-export const metadata = {
-  title: 'Timex - Watch store',
-  description: 'Watch store',
-};
-
-
 export default function Home() {
   return (
     <div className='min-h-screen'>
