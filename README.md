@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![image](https://github.com/MohammadSahragard/timex/assets/77649975/44c9724c-ffd0-4e3f-8870-482969a7a509)
 
-## Getting Started
+# Timex
+Access my site at [timex-store.vercel.app](https://timex-store.vercel.app)
 
-First, run the development server:
+---
+### About the app
+The Timex is a store of watches for men, women, and kids. In this personal project for my resume, I faced some UI challenges. I took the UI of this project from demo images of a project on Behance, which were in desktop size. So, I had to design the smaller sizes myself and hopefully, they have turned out well.
+- UI address: [Timex - Watch Shop](https://www.behance.net/gallery/61163831/Timex-Watch-Shop)
+- UI designer: [Matt Wojtaś](https://www.behance.net/gallery/61163831/Timex-Watch-Shop)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Technologies used
+- Next js
+- Next ui
+- Redux toolkit
+- React query
+- Gsap
+- Swiper
+- Other: AOS, React-scroll
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
+### Screen shots
+**Home page**
+<img src="https://github.com/MohammadSahragard/timex/assets/77649975/1df3a83b-2ec7-4521-b719-7f9ea249e907" alt="home page" width="100%" >
+**Category page**
+![category-page](https://github.com/MohammadSahragard/timex/assets/77649975/aba750b0-3873-4374-aaa3-346baea0a6fd)
+**Product page**
+<img src="https://github.com/MohammadSahragard/timex/assets/77649975/1df3a83b-2ec7-4521-b719-7f9ea249e907**" alt="product page" width="100%" >
+**Basket page**
+![basket-page](https://github.com/MohammadSahragard/timex/assets/77649975/330141f1-dbae-45f1-a64a-c45b8f164e99)
+**Main menu**
+![main-menu-page](https://github.com/MohammadSahragard/timex/assets/77649975/345553a9-833b-4f99-9aeb-af66dd18de4b)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+### Lisence
+MIT license [@MohammadSahragard](https://github.com/MohammadSahragard)
