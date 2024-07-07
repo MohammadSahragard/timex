@@ -1,14 +1,13 @@
-![image](https://github.com/MohammadSahragard/timex/assets/77649975/44c9724c-ffd0-4e3f-8870-482969a7a509)
+![timex-github-readme](https://github.com/MohammadSahragard/timex/assets/77649975/8de13b6b-0347-4b98-b9c5-e5a3ba1e72a3)
 
 # Timex
-Access my site at [timex-store.vercel.app](https://timex-store.vercel.app)
 
----
 ### About the app
-The Timex is a store of watches for men, women, and kids. In this personal project for my resume, I faced some UI challenges. I took the UI of this project from demo images of a project on Behance, which were in desktop size. So, I had to design the smaller sizes myself and hopefully, they have turned out well.
-- UI address: [Timex - Watch Shop](https://www.behance.net/gallery/61163831/Timex-Watch-Shop)
-- UI designer: [Matt Wojtaś](https://www.behance.net/gallery/61163831/Timex-Watch-Shop)
+> The Timex is a store of watches for men, women, and kids. In this personal project for my resume, I faced some UI challenges. I took the UI of this project from demo images of a project on Behance, which were in desktop size. So, I had to design the smaller sizes myself and hopefully, they have turned out well.
+> - UI address: [Timex - Watch Shop](https://www.behance.net/gallery/61163831/Timex-Watch-Shop)
+> - UI designer: [Matt Wojtaś](https://www.behance.net/gallery/61163831/Timex-Watch-Shop)
 
+#
 ### Technologies used
 - Next js
 - Next ui
